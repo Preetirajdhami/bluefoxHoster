@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.custom-padding {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  
