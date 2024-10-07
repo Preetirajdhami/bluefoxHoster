@@ -3,15 +3,17 @@ import Header from "./_components/header";
 import TopBar from "./_components/Topbar";
 import Hero from "./_components/Hero";
 import Footer from "./_components/footer";
-import Header2 from "./_components/Header2";
+
+import HostingPlansCard from "./_components/HostingPlansCard";
 
 export default function Home() {
   return (
-   <div className="w-full bg-[#615EFF]">
+   <div className="w-full ">
     <TopBar/>
     <Header/>
-    <Header2/>
+    
     <Hero/>
+    <HostingPlansCard/>
     <Footer/>
 
    </div>

@@ -13,8 +13,8 @@ export default function TopBar() {
   };
 
   return (
-    <div className="bg-[#615EFF] text-white text-sm">
-      <div className="w-full mx-auto flex justify-between items-center px-8 py-2 text-base">
+    <div className="bg-white text-white text-sm">
+      <div className="w-full mx-auto bg-[#615EFF] flex justify-between items-center px-8 py-2 text-base">
         {/* Email Section */}
         <div className="flex items-center space-x-2">
           <FaEnvelope className="text-white" />
