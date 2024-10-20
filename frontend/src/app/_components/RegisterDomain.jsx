@@ -3,6 +3,9 @@ import React from 'react';
 const RegisterDomain = () => {
   return (
     <div className="flex flex-col items-center justify-center mt-16 mb-16 bg-gray-50 relative">
+      <div>
+        <p className='text-gray-700 text-2xl'>Register Your Perfect Domain Name</p>
+      </div>
      
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="w-full border-t border-gray-300"></div>

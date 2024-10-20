@@ -3,7 +3,7 @@ import React from 'react'
 const CloudFlareLogo = () => {
   return (
     <svg width="195" height="30" viewBox="0 0 191 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_2299_162)">
+    <g clipPath="url(#clip0_2299_162)">
     <mask id="mask0_2299_162" style={{ maskType: 'luminance' }} maskUnits="userSpaceOnUse" x="0" y="0" width="191" height="28">
     <path d="M0 0H190.4V28H0V0Z" fill="white"/>
     </mask>
