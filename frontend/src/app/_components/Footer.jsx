@@ -9,7 +9,7 @@ const Footer = () => {
                 background: 'linear-gradient(93.2deg, rgba(10, 40, 100, 1) 0%, rgba(24, 95, 246, 1) 80%)',
             }}
             >
-            <div className="w-full px-8">
+            <div className="w-full px-8 2xl:px-56">
                 <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-8">
                     {/* Company Section */}
                     <div>

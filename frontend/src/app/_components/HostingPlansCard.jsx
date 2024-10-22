@@ -4,8 +4,8 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const HostingPlansCard = () => {
   return (
-    <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-8 p-3 mt-16md:px-8 pt-8 bg-white'>
-
+    <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-8 p-3 mt-16 md:px-8 2xl:px-56 pt-8 bg-white'>
+         {/* first card */}    
       <div className="relative border-2 border-blue-500 rounded-lg p-6 flex flex-col items-center md:items-start gap-4 md:gap-8 max-w-md md:max-w-4xl mx-auto">
 
 

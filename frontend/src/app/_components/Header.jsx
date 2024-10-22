@@ -8,14 +8,14 @@ export default function Header() {
 
   return (
     <header
-      className="sticky top-0 z-50"
+      className="sticky top-0 z-50 "
       style={{
         background:
           "linear-gradient(93.2deg, rgba(10, 40, 100, 1) 0%, rgba(24, 95, 246, 1) 80%)",
         boxShadow: "0 4px 10px rgba(0, 0, 0, 0.5) 0px 0.2rem 0.5rem",
       }}
     >
-      <div className="w-full relative flex flex-row items-center justify-between px-8 py-4">
+      <div className="w-full  relative flex flex-row items-center justify-between px-8 2xl:px-56 py-4">
         {/* Logo and Brand */}
         <div className="flex items-center">
           <img src="/bluefox.png" alt="Brand Logo" className="h-8 w-8" />
@@ -23,7 +23,7 @@ export default function Header() {
         </div>
 
         {/* Navigation - Hidden on small screens */}
-        <nav className="hidden lg:flex space-x-8">
+        <nav className="hidden lg:flex space-x-9">
       {/* Home link */}
       <a href="#" className="text-base text-white hover:text-blue-200 transition">
         Home
@@ -41,10 +41,10 @@ export default function Header() {
           <a href="/web-hosting" className="block px-4 py-2 hover:bg-blue-200 transition">
             Web Hosting
           </a>
-          <a href="#" className="block px-4 py-2 hover:bg-blue-200 transition">
+          <a href="/vps-hosting" className="block px-4 py-2 hover:bg-blue-200 transition">
             VPS Hosting
           </a>
-          <a href="#" className="block px-4 py-2 hover:bg-blue-200 transition">
+          <a href="/wordPress-hosting" className="block px-4 py-2 hover:bg-blue-200 transition">
             WordPress Hosting
           </a>
           <a href="#" className="block px-4 py-2 hover:bg-blue-200 transition">

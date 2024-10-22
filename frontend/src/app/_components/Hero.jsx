@@ -11,7 +11,7 @@ const Hero = () => {
         background: 'linear-gradient(93.2deg, rgba(10, 40, 100, 1) 14.4%, rgba(24, 95, 246, 1) 90.8%)',
       }}
     >
-      <div className='w-full px-4 md:px-8 flex flex-col md:flex-row justify-between items-center'>
+      <div className='w-full px-4 md:px-8 2xl:px-56 flex flex-col md:flex-row justify-between items-center'>
         <div className='flex-1 text-white mb-4 md:mb-0'>
           <p className='mt-2 text-base md:text-lg'>
             Up to 75% off Web hosting
