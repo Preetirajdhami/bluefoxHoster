@@ -24,69 +24,70 @@ export default function Header() {
 
         {/* Navigation - Hidden on small screens */}
         <nav className="hidden lg:flex space-x-9">
-      {/* Home link */}
-      <a href="#" className="text-base text-white hover:text-blue-200 transition">
-        Home
-      </a>
+          {/* Home link */}
+          <a href="#" className="text-base text-white hover:text-blue-200 transition">
+            Home
+          </a>
 
-      <div className="relative group">
-        <a
-          href="#"
-          className="text-base text-white hover:text-blue-200 transition flex items-center"
-        >
-          Hosting
-          <RiArrowDropDownLine className="ml-1 text-2xl" />
-        </a>
-        <div className="absolute hidden group-hover:block bg-white text-black rounded shadow-lg mt-2 p-5">
-          <a href="/web-hosting" className="block px-4 py-2 hover:bg-blue-200 transition">
-            Web Hosting
-          </a>
-          <a href="/vps-hosting" className="block px-4 py-2 hover:bg-blue-200 transition">
-            VPS Hosting
-          </a>
-          <a href="/wordPress-hosting" className="block px-4 py-2 hover:bg-blue-200 transition">
-            WordPress Hosting
-          </a>
-          <a href="#" className="block px-4 py-2 hover:bg-blue-200 transition">
-            Business Hosting
-          </a>
-        </div>
-      </div>
+          <div className="relative group">
+            <a
+              href="#"
+              className="text-base text-white hover:text-blue-200 transition flex items-center"
+            >
+              Hosting
+              <RiArrowDropDownLine className="ml-1 text-2xl" />
+            </a>
+            <div className="absolute hidden group-hover:block bg-white text-black rounded shadow-lg mt-2 p-5">
+              <a href="/web-hosting" className="block px-4 py-2 hover:bg-blue-200 transition">
+                Web Hosting
+              </a>
+              <a href="/vps-hosting" className="block px-4 py-2 hover:bg-blue-200 transition">
+                VPS Hosting
+              </a>
+              <a href="/wordPress-hosting" className="block px-4 py-2 hover:bg-blue-200 transition">
+                WordPress Hosting
+              </a>
+              <a href="#" className="block px-4 py-2 hover:bg-blue-200 transition">
+                Business Hosting
+              </a>
+            </div>
+          </div>
 
-  
-      <div className="relative group">
-        <a
-          href="#"
-          className="text-base text-white hover:text-blue-200 transition flex items-center"
-        >
-          Domains
-          <RiArrowDropDownLine  className="ml-1 text-2xl" /> 
-        </a>
-        <div className="absolute hidden group-hover:block bg-white text-black rounded shadow-lg mt-2">
-          <a href="#" className="block px-4 py-2 hover:bg-blue-200 transition">
-            Domain Registration
+
+
+          <div className="relative group">
+            <a
+              href="#"
+              className="text-base text-white hover:text-blue-200 transition flex items-center"
+            >
+              Domains
+              <RiArrowDropDownLine className="ml-1 text-2xl" />
+            </a>
+            <div className="absolute hidden group-hover:block bg-white text-black rounded shadow-lg mt-2">
+              <a href="#" className="block px-4 py-2 hover:bg-blue-200 transition">
+                Domain Registration
+              </a>
+              <a href="#" className="block px-4 py-2 hover:bg-blue-200 transition">
+                Domain Transfer
+              </a>
+            </div>
+          </div>
+
+          {/* About link */}
+          <a href="#" className="text-base text-white hover:text-blue-200 transition">
+            About
           </a>
-          <a href="#" className="block px-4 py-2 hover:bg-blue-200 transition">
-            Domain Transfer
+
+          {/* Blog link */}
+          <a href="#" className="text-base text-white hover:text-blue-200 transition">
+            Blog
           </a>
-        </div>
-      </div>
 
-      {/* About link */}
-      <a href="#" className="text-base text-white hover:text-blue-200 transition">
-        About
-      </a>
-
-      {/* Blog link */}
-      <a href="#" className="text-base text-white hover:text-blue-200 transition">
-        Blog
-      </a>
-
-      {/* Contact Us link */}
-      <a href="#" className="text-base text-white hover:text-blue-200 transition">
-        Contact Us
-      </a>
-    </nav>
+          {/* Contact Us link */}
+          <a href="#" className="text-base text-white hover:text-blue-200 transition">
+            Contact Us
+          </a>
+        </nav>
 
         {/* Login and Register - Hidden on small screens */}
         <div className="hidden lg:block space-x-2 rounded-full border px-6 py-3 text-base transition">
