@@ -11,19 +11,19 @@ const VpsHostingFeatures = () => {
     const [isYearly, setIsYearly] = useState(true);
     const features = [
         {
-            icon: <IoServer className="text-4xl" />,
+            icon: <IoServer className="text-4xl text-green-500" />,
             title: "Dedicated Resources",
             description:
                 "Each VPS environment is allocated dedicated resources like CPU, RAM, and storage, ensuring consistent performance and preventing other users from impacting your website or application.",
         },
         {
-            icon: <BsGraphUpArrow className="text-4xl" />,
+            icon: <BsGraphUpArrow className="text-4xl text-blue-500" />,
             title: "Scalability",
             description:
                 "VPS hosting can easily adapt to your needs as your business or website grows, allowing you to increase or adjust resources like memory, storage, and bandwidth without migrating to a new server.",
         },
         {
-            icon: <AiOutlineFileProtect className="text-4xl" />,
+            icon: <AiOutlineFileProtect className="text-4xl text-yellow-500" />,
             title: "Enhanced Security and Control",
             description:
                 "VPS hosting provides a higher level of security compared to shared hosting, as each VPS is isolated from others. Users often have root access, allowing them to manage resources fully.",
@@ -34,11 +34,11 @@ const VpsHostingFeatures = () => {
 
     return (
         <div className="bg-gray-200">
-            <div className="  flex flex-col px-8 2xl:px-56 items-center">
+            <div className="  flex flex-col px-8 2xl:px-56 pt-14 items-center">
                 <div>
                     <div className="flex flex-col justify-center space-y-7">
-                        <h2 className="text-4xl text-center font-medium">
-                            Why Choose Bluefoxhoster as Your VPS Hosting Provider?
+                        <h2 className="text-4xl text-center font-medium" style={{ color: '#0073b3' }}>
+                            Why Choose Blue Fox Hoster as Your VPS Hosting Provider?
                         </h2>
                         <p className="text-sm text-center">
                             At BlueFox Hoster, our Virtual Private Servers (VPS) provide a dynamic solution for web hosting, data storage, application deployment, and beyond. Offering more flexibility, scalability, and cost efficiency than traditional servers, our VPS hosting empowers your business to grow without limits. With BlueFox Hoster’s top-tier features and dedicated support, you’ll experience reliable, high-performance hosting tailored to meet all your needs.
@@ -58,9 +58,9 @@ const VpsHostingFeatures = () => {
                     </div>
                 </div>
                 <div>
-                    <h2>VPS Hosting Plans For You</h2>
+                    <h2 className="text-4xl font-medium text-gray-800">VPS Hosting Plans For You</h2>
                     <div className="flex justify-center items-center mt-6">
-                        <span className="text-gray-500">Monthly</span>
+                        <span className="text-gray-500 text-xl">Monthly</span>
                         <label className="mx-2 relative inline-flex items-center cursor-pointer">
                             <input
                                 type="checkbox"
@@ -73,7 +73,7 @@ const VpsHostingFeatures = () => {
                                 <FaCircle className="text-white w-5 h-5" />
                             </span>
                         </label>
-                        <span className="text-gray-500">Yearly</span>
+                        <span className="text-gray-500 text-xl">Yearly</span>
                     </div>
 
                     <div className="bg-gray-50">
@@ -154,116 +154,45 @@ const VpsHostingFeatures = () => {
                                 </a>
                             </td>
                         </tr>
-                        <tr>
-                            <td colSpan="6" className="py-4 text-center text-lg font-semibold">
-                                All Plans Come With
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="py-4 px-6 border-b border-gray-200">
-                                <div className="flex justify-between items-center">
-                                    <div className="flex items-center">
 
-                                        <CiCircleCheck className="text-2xl mr-2 text-green-500" />
-                                        <span>Full Root Access</span>
-                                    </div>
-                                    <button className=" py-1 px-2 ">
-                                        <IoIosInformationCircleOutline className="text-2xl mr-2" />
-                                    </button>
-                                </div>
-                            </td>
-                            <td className="py-4 px-6 border-b border-gray-200">
-                                <div className="flex justify-between items-center">
-                                    <div className="flex items-center">
-
-                                        <CiCircleCheck className="text-2xl mr-2 text-green-500" />
-                                        <span>SSD Storage</span>
-                                    </div>
-                                    <button className=" py-1 px-2 ">
-                                        <IoIosInformationCircleOutline className="text-2xl mr-2" />
-                                    </button>
-                                </div>
-                            </td>
-                            <td className="py-4 px-6 border-b border-gray-200">
-                                <div className="flex justify-between items-center">
-                                    <div className="flex items-center">
-
-                                        <CiCircleCheck className="text-2xl mr-2 text-green-500" />
-                                        <span>DDoS Protection</span>
-                                    </div>
-                                    <button className=" py-1 px-2 ">
-                                        <IoIosInformationCircleOutline className="text-2xl mr-2" />
-                                    </button>
-                                </div>
-                            </td>
-                            <td className="py-4 px-6 border-b border-gray-200">
-                                <div className="flex justify-between items-center">
-                                    <div className="flex items-center">
-
-                                        <CiCircleCheck className="text-2xl mr-2 text-green-500" />
-                                        <span>24/7 Customer Support</span>
-                                    </div>
-                                    <button className=" py-1 px-2 ">
-                                        <IoIosInformationCircleOutline className="text-2xl mr-2" />
-                                    </button>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td className="py-4 px-6 border-b border-gray-200">
-                                <div className="flex justify-between items-center">
-                                    <div className="flex items-center">
-
-                                        <CiCircleCheck className="text-2xl mr-2 text-green-500" />
-                                        <span>Full Root Access</span>
-                                    </div>
-                                    <button className=" py-1 px-2 ">
-                                        <IoIosInformationCircleOutline className="text-2xl mr-2" />
-                                    </button>
-                                </div>
-                            </td>
-                            <td className="py-4 px-6 border-b border-gray-200">
-                                <div className="flex justify-between items-center">
-                                    <div className="flex items-center">
-
-                                        <CiCircleCheck className="text-2xl mr-2 text-green-500" />
-                                        <span>SSD Storage</span>
-                                    </div>
-                                    <button className=" py-1 px-2 ">
-                                        <IoIosInformationCircleOutline className="text-2xl mr-2" />
-                                    </button>
-                                </div>
-                            </td>
-                            <td className="py-4 px-6 border-b border-gray-200">
-                                <div className="flex justify-between items-center">
-                                    <div className="flex items-center">
-
-                                        <CiCircleCheck className="text-2xl mr-2 text-green-500" />
-                                        <span>DDoS Protection</span>
-                                    </div>
-                                    <button className=" py-1 px-2 ">
-                                        <IoIosInformationCircleOutline className="text-2xl mr-2" />
-                                    </button>
-                                </div>
-                            </td>
-                            <td className="py-4 px-6 border-b border-gray-200">
-                                <div className="flex justify-between items-center">
-                                    <div className="flex items-center">
-
-                                        <CiCircleCheck className="text-2xl mr-2 text-green-500" />
-                                        <span>24/7 Customer Support</span>
-                                    </div>
-                                    <button className=" py-1 px-2 ">
-                                        <IoIosInformationCircleOutline className="text-2xl mr-2" />
-                                    </button>
-                                </div>
-                            </td>
-
-                        </tr>
 
                     </tbody>
                 </table>
+
+                <div className="flex flex-col lg:flex-row items-start pt-14 pb-14">
+            
+            <div className="lg:w-1/3 mb-8 lg:mb-0">
+                <h2 className="text-4xl font-medium text-left mb-4" style={{ color: '#0073b3' }}>All Plans Come With</h2>
+                <p className="text-left text-gray-700 mb-4">
+                    Our hosting plans offer robust features tailored to meet your needs, ensuring performance, security, and support.
+                </p>
+                <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-200">
+                    Learn More
+                </button>
+            </div>
+
+         
+            <div className="lg:w-2/3 lg:pl-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+                
+                {[
+                    "Full Root Access",
+                    "SSD Storage",
+                    "DDoS Protection",
+                    "24/7 Customer Support",
+                    "IPv4 IP Address",
+                    "Easy to Scale",
+                    "Enhanced Security",
+                    "Monitoring & Alerts"
+                ].map((feature, index) => (
+                    <div key={index} className="bg-white border border-gray-300 rounded-lg p-4 shadow-md hover:shadow-lg transition duration-200">
+                        <div className="flex items-center">
+                            <CiCircleCheck className="text-2xl mr-2 text-green-500" />
+                            <span className="font-medium">{feature}</span>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
             </div>
 
         </div>

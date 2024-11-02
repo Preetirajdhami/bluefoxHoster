@@ -1,9 +1,9 @@
 import React from 'react'
-import Header from '../_components/header';
+import Header from '../_components/Header';
 import WebHostingImage from '../_components/WebHostingImage';
-import PricingPlans from '../_components/PricingPlans';
+import WebHostingImage2 from '../_components/WebHostingImage2'
 import WebHostingCard from '../_components/WebHostingCard';
-import Footer from '../_components/footer';
+import Footer from '../_components/Footer';
 
 const WebHosting = () => {
   return (
@@ -53,8 +53,38 @@ const WebHosting = () => {
       </div>
     </div>
 
-    <PricingPlans />
+    
     <WebHostingCard />
+
+    <div className="flex flex-col lg:flex-row items-center justify-between p-8 bg-gray-200">
+           
+            <div className="lg:w-1/2 mb-8 lg:mb-0">
+            <div className="">
+            <WebHostingImage2/>
+          </div>
+          <p className='text-sm text-gray-400 mt-2'>
+            <a href="https://storyset.com/online" target="_blank" rel="noopener noreferrer">
+
+            </a>
+          </p>
+            </div>
+
+            
+            <div className="lg:w-1/2 lg:pl-8">
+                <h2 className="text-3xl font-bold text-gray-700 mb-4">
+                    Why Choose Web Hosting with Blue Fox Hoster?
+                </h2>
+                <p className="text-gray-600 mb-4">
+                    Blue Fox Hoster provides reliable and secure web hosting solutions tailored to your specific needs. Our state-of-the-art infrastructure ensures your website remains online and performs optimally at all times.
+                </p>
+                <p className="text-gray-600 mb-4">
+                    With our 24/7 customer support, you can count on us to be there whenever you need assistance. Our knowledgeable team is always ready to help you with any issues or questions you may have, ensuring a smooth hosting experience.
+                </p>
+                <p className="text-gray-600">
+                    Choose Blue Fox Hoster for our competitive pricing and excellent features, including free SSL certificates, daily backups, and a user-friendly control panel. Experience the best web hosting services and take your online presence to the next level.
+                </p>
+            </div>
+        </div>
     <Footer />
       
     </div>

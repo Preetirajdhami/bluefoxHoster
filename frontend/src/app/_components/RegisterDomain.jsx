@@ -4,7 +4,7 @@ const RegisterDomain = () => {
   return (
     <div className="flex flex-col items-center justify-center mt-16 mb-16 bg-gray-50 relative">
       <div>
-        <p className='text-gray-700 text-2xl'>Register Your Perfect Domain Name</p>
+        <p className='text-gray-700 text-3xl font-medium'>Register Your Perfect Domain Name</p>
       </div>
      
       <div className="absolute inset-0 flex items-center justify-center">

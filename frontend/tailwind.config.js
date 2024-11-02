@@ -10,11 +10,13 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        backgroundImage: {
-          'custom-gradient': 'linear-gradient(258.38deg, #532be9 24.08%, #1b076e 91.93%)',
+        
+          colors: {
+            customBlue: '#e2f4fe',
+          },
         },
       },
-    },
+    
   },
   plugins: [],
 };
