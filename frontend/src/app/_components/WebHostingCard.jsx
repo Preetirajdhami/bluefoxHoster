@@ -40,25 +40,25 @@ const HostingPlanCard = ({ title, monthlyPrice, yearlyPrice, features, isYearly 
 };
 
 const WebHostingCard = () => {
-    const [isYearly, setIsYearly] = useState(false); // State to toggle between monthly and yearly
+    const [isYearly, setIsYearly] = useState(false); 
 
     const plans = [
         {
             title: "LaunchPad Web Hosting",
             monthlyPrice: 250,
-            yearlyPrice: 2500, // Adjust yearly price as needed
+            yearlyPrice: 2500, 
             features: ["1 Site hosted", "3 GB SSD Storage", "3 Custom Emails", "LiteSpeed Web Server", "Daily Backups"]
         },
         {
             title: "Growth Web Hosting",
             monthlyPrice: 500,
-            yearlyPrice: 5000, // Adjust yearly price as needed
+            yearlyPrice: 5000,
             features: ["5 Sites hosted", "10 GB SSD Storage", "5 Custom Emails", "LiteSpeed Web Server", "Daily Backups"]
         },
         {
             title: "Pro Web Hosting",
             monthlyPrice: 1000,
-            yearlyPrice: 10000, // Adjust yearly price as needed
+            yearlyPrice: 10000, 
             features: ["10 Sites hosted", "20 GB SSD Storage", "Unlimited Emails", "LiteSpeed Web Server", "Daily Backups"]
         },
     ];

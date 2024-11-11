@@ -8,7 +8,7 @@ const TrustedBySection = () => {
   return (
     <div className="bg-gray-100 py-16 px-8">
       <h2
-        className="text-3xl md:text-4xl font-semibold text-center"
+        className="text-3xl  md:text-4xl  font-medium md:font-semibold text-center"
         style={{ color: '#0073b3' }}
       >
         Blue Fox Hoster trusted by 10,000+ Websites
@@ -17,7 +17,7 @@ const TrustedBySection = () => {
       <p className="text-gray-500 text-center mt-4">
         We use Industry leading web technologies Cpanel, Litespeed, Imunify360 to enhance the performance of our customers' websites.
       </p>
-      <div className="flex justify-center items-center space-x-8 mt-8">
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:space-x-8 mt-8">
         <CloudLinuxLogo />
         <CloudFlareLogo />
         <CpanelwhmLogo />

@@ -10,7 +10,7 @@ import RegisterDomain from "./_components/RegisterDomain"; import Services from 
 
 export default function Home() {
   return (
-   <div className="w-full ">
+   <div className="w-full overflow-hidden ">
     <TopBar/>
     <Header/>
     

@@ -68,7 +68,7 @@ const WordpressHosting = () => {
     <div>
       <Header />
       <div
-        className='bg-custom-gradient py-14 2xl:px-56 px-8 '
+        className=' py-14 2xl:px-56 px-8 '
         style={{
           background: 'linear-gradient(93.2deg, rgba(10, 40, 100, 1) 14.4%, rgba(24, 95, 246, 1) 90.8%)',
         }}

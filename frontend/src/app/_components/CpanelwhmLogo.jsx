@@ -2,7 +2,7 @@ import React from 'react'
 
 const CpanelwhmLogo = () => {
   return (
-    <svg width="195" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2274.28 240.2 ">
+    <svg width="250" height="55" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2274.28 240.2 ">
       <defs> <style>
                     {`.cls-1 { fill: #ff6c2c; }`}
                 </style></defs>
