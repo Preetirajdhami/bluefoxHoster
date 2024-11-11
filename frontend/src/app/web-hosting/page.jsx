@@ -5,10 +5,11 @@ import WebHostingImage2 from '../_components/WebHostingImage2'
 import WebHostingCard from '../_components/WebHostingCard';
 import Footer from '../_components/Footer';
 import TopBar from '../_components/Topbar';
+import WebhostingDetailedPricing from '../_components/WebhostingDetailedPricing'
 
 const WebHosting = () => {
   return (
-    <div className=''>
+    <div className='overflow-hidden'>
       <TopBar />
       <Header />
       <div
@@ -89,6 +90,8 @@ const WebHosting = () => {
         </div>
 
       </div>
+      <WebhostingDetailedPricing />
+
 
 
       <Footer />

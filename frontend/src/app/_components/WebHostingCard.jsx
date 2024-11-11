@@ -3,8 +3,10 @@ import React, { useState } from 'react';
 import { FaCheckCircle, FaCircle } from "react-icons/fa";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 
+
 const HostingPlanCard = ({ title, monthlyPrice, yearlyPrice, features, isYearly }) => {
     const price = isYearly ? yearlyPrice : monthlyPrice;
+
 
     return (
         <div className="relative border-2 border-blue-500 rounded-lg p-6 flex flex-col items-center md:items-start gap-4 md:gap-6 max-w-md md:max-w-4xl mx-auto transition-all duration-300">
@@ -40,13 +42,16 @@ const HostingPlanCard = ({ title, monthlyPrice, yearlyPrice, features, isYearly 
 };
 
 const WebHostingCard = () => {
-    const [isYearly, setIsYearly] = useState(false); 
+    const [isYearly, setIsYearly] = useState(false);
+    const scrollToPricing = () => {
+        document.getElementById('pricing-section').scrollIntoView({ behavior: 'smooth' });
+    };
 
     const plans = [
         {
             title: "LaunchPad Web Hosting",
             monthlyPrice: 250,
-            yearlyPrice: 2500, 
+            yearlyPrice: 2500,
             features: ["1 Site hosted", "3 GB SSD Storage", "3 Custom Emails", "LiteSpeed Web Server", "Daily Backups"]
         },
         {
@@ -58,14 +63,14 @@ const WebHostingCard = () => {
         {
             title: "Pro Web Hosting",
             monthlyPrice: 1000,
-            yearlyPrice: 10000, 
+            yearlyPrice: 10000,
             features: ["10 Sites hosted", "20 GB SSD Storage", "Unlimited Emails", "LiteSpeed Web Server", "Daily Backups"]
         },
     ];
 
     return (
-        <div className='bg-gray-50 py-10 px-6 text-center'>
-            <h2 className="text-5xl font-medium text-gray-700">Best Cloud Hosting Plans</h2>
+        <div className='bg-gray-50 pt-10 px-6 text-center'>
+            <h2 className="text-5xl font-medium text-gray-700" style={{ color: '#0073b3' }}>Best Cloud Hosting Plans</h2>
             <p className="text-gray-500 mt-2">
                 Join the thousands who trust our top-rated web hosting in Nepal. Choose the best web hosting package that best fits your needs.
             </p>
@@ -106,7 +111,15 @@ const WebHostingCard = () => {
                 {plans.map((plan, index) => (
                     <HostingPlanCard key={index} {...plan} isYearly={isYearly} />
                 ))}
+
+
             </div>
+            <div className='pt-4 pb-4'>
+                <h1 className='cursor-pointer border-2 border-blue-500 inline-block px-4 py-2 rounded-lg text-gray-700 hover:bg-blue-50' onClick={scrollToPricing}>
+                    Compare Web Hosting Plans
+                </h1>
+            </div>
+
         </div>
     );
 };

@@ -118,7 +118,7 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:block space-x-2 rounded-full border px-6 py-3 text-base transition">
-          <a href="login" className="text-white hover:text-blue-200 transition">
+          <a href="https://client.bluefoxhoster.com/dologin.php" className="text-white hover:text-blue-200 transition">
             Log In
           </a>
           <span className="text-white">|</span>
