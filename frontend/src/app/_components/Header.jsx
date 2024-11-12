@@ -70,7 +70,7 @@ export default function Header() {
                 WordPress Hosting
               </a>
               <a
-                href="/business-hosting"
+                href="/business-email-hosting"
                 className="px-4 py-2 rounded-lg text-left hover:bg-blue-100 transition transform hover:scale-105 flex items-center"
               >
                 <MdEmail className="mr-4 text-xl text-blue-500" />
@@ -173,7 +173,7 @@ export default function Header() {
                     WordPress Hosting
                   </a>
                   <a
-                    href="/business-hosting"
+                    href="/business-email-hosting"
                     className="text-gray-700 hover:text-blue-500 transition transform hover:scale-105 flex items-center"
                   >
                     <MdEmail className="mr-4 text-xl text-blue-500" />

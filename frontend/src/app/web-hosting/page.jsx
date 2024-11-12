@@ -9,7 +9,7 @@ import WebhostingDetailedPricing from '../_components/WebhostingDetailedPricing'
 
 const WebHosting = () => {
   return (
-    <div className='overflow-hidden'>
+    <div className=''>
       <TopBar />
       <Header />
       <div
@@ -59,7 +59,7 @@ const WebHosting = () => {
 
       <WebHostingCard />
 
-      <div className="flex flex-col lg:flex-row items-center justify-between p-8 2xl:px-56 bg-gray-200">
+      <div className="flex flex-col lg:flex-row items-center justify-between p-8 2xl:px-56 overflow-hidden bg-gray-200">
 
        
         <div className="lg:w-1/2 mb-8 lg:mb-0">

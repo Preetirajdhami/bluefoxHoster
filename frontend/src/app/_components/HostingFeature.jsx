@@ -71,7 +71,7 @@ const HostingFeatures = () => {
 
       </div>
 
-      <div className='flex flex-col mt-24 md:flex-row '>
+      <div className='flex flex-col mt-24 md:flex-row overflow-hidden '>
         <div>
           <h1 className='text-4xl font-semibold text-left'
             style={{ color: '#0073b3' }}>Real Worldwide Hosting with Blue Fox Hoster</h1>

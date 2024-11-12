@@ -10,55 +10,49 @@ function DomainRegistration() {
       <Header />
 
       <div
-        className=" flex flex-col items-center justify-center min-h-screen  text-white bg-custom-gradient py-8 2xl:px-56 px-8"
+        className="flex flex-col items-center justify-center min-h-screen overflow-x-hidden text-white bg-custom-gradient py-8 2xl:px-56 px-8"
         style={{
           background:
             "linear-gradient(93.2deg, rgba(10, 40, 100, 1) 14.4%, rgba(24, 95, 246, 1) 90.8%)",
         }}
       >
         <h1 className="text-4xl font-bold text-center mb-2">
-          Nepal's Best Domain <span >Registar</span>
+          Nepal's Best Domain <span>Registrar</span>
         </h1>
         <p className="text-center mb-6 text-xl">
           Find your perfect domain name in Nepal with Free Privacy Protection.
         </p>
 
-        <div className="text-center mb-6">
+        <div className="text-center ">
           <p className="text-lg">
             {/* Exclusive .COM Domain at just{" "} */}
             {/* <span className="text-2xl font-semibold">Rs 1550</span> / year */}
           </p>
         </div>
 
-
         <form
           action="https://client.bluefoxhoster.com/cart.php?a=add&domain=register"
           method="post"
           className="w-full max-w-xl"
         >
-          <div className="flex w-full mb-4">
+          <div className="flex flex-col md:flex-row w-full mb-4 items-center justify-center md:space-x-4">
             <input
               type="text"
               placeholder="Find Your Domain Name"
-              className="w-full p-4 text-black rounded-lg text-xl outline-none mr-2"
+              className="w-full p-4 text-black rounded-lg text-xl outline-none mb-4 md:mb-0"
               style={{ minWidth: "300px" }}
               name="query"
             />
             <button
               type="submit"
-              className="py-4 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg w-auto"
+              className="py-4 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg w-full md:w-auto"
             >
               Go
             </button>
           </div>
         </form>
 
-
-
-
-
-
-        <div className="flex justify-center space-x-4 mt-6">
+        <div className="flex justify-center font-semibold space-x-4 mt-6">
           <span className="text-white text-4xl">.com</span>
           <span className="text-white text-4xl">.net</span>
           <span className="text-white text-4xl">.org</span>
@@ -66,9 +60,10 @@ function DomainRegistration() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center py-12 bg-colors-customBlue">
-        {/* Title and Subtitle */}
-        <h2 className="text-3xl font-semibold text-gray-800 mb-4">
+
+      <div className="flex flex-col items-center px-8 2xl:px-56 py-12 bg-colors-customBlue">
+
+        <h2 className="text-5xl font-bold text-gray-800 mb-4">
           What Do You Receive?
         </h2>
         <p className="text-gray-600 text-center mb-10 max-w-2xl">
@@ -79,7 +74,7 @@ function DomainRegistration() {
 
         {/* Feature Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 w-full max-w-4xl">
-          {/* Contact Management */}
+
           <div className="bg-white rounded-lg p-6 shadow-md">
             <FaCog className="text-blue-500 text-3xl mb-3" />
             <h3 className="font-semibold text-lg text-gray-800">
@@ -91,7 +86,7 @@ function DomainRegistration() {
             </p>
           </div>
 
-          {/* Always Secure */}
+
           <div className="bg-white rounded-lg p-6 shadow-md">
             <FaShieldAlt className="text-blue-500 text-3xl mb-3" />
             <h3 className="font-semibold text-lg text-gray-800">
@@ -103,7 +98,7 @@ function DomainRegistration() {
             </p>
           </div>
 
-          {/* Privacy Protection */}
+
           <div className="bg-white rounded-lg p-6 shadow-md">
             <FaLock className="text-blue-500 text-3xl mb-3" />
             <h3 className="font-semibold text-lg text-gray-800">
@@ -115,7 +110,7 @@ function DomainRegistration() {
             </p>
           </div>
 
-          {/* Free Transfers */}
+
           <div className="bg-white rounded-lg p-6 shadow-md">
             <FaExchangeAlt className="text-blue-500 text-3xl mb-3" />
             <h3 className="font-semibold text-lg text-gray-800">
@@ -130,14 +125,14 @@ function DomainRegistration() {
       </div>
 
       <div
-        className="flex flex-col md:flex-row  p-8 shadow-lg   "
+        className="flex flex-col md:flex-row pb-10 px-8 2xl:px-56 shadow-lg   "
         style={{
           background:
             "linear-gradient(93.2deg, rgba(10, 40, 100, 1) 14.4%, rgba(24, 95, 246, 1) 90.8%)",
         }}
       >
         <div className="flex-1 flex flex-col items-start mb-6 md:mb-0 md:pr-10">
-          <h2 className="text-4xl font-bold text-center text-white mb-4">
+          <h2 className="text-4xl font-bold text-center py-8 text-white mb-4">
             Why Purchase a Domain Name with Blue Fox Hoster
           </h2>
 
@@ -184,6 +179,52 @@ function DomainRegistration() {
           </ul>
         </div>
       </div>
+        
+      <div className="px-8 py-10 2xl:px-56 bg-gray-50">
+          <h1 className="text-center text-gray-700 font-bold text-5xl">Search for the Right Top-Level Domain</h1>
+          <p className="text-center pt-2 text-gray-600">Blue Fox Hoster provides reliable and easy-to-use domain management services at competitive prices. Our pricing is transparent, with no hidden charges—what you see is what you get, covering both annual registration and renewal. Every domain comes with full DNS management and forwarding capabilities to help you manage your online presence effortlessly.</p>
+        </div>
+      <div className="flex justify-center items-center pb-10 bg-gray-50 px-8 2xl:px-56">
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
+          {/* .com Card */}
+          <div className="bg-white border 0 p-6 rounded-lg shadow-lg text-center">
+            <h3 className="text-2xl font-bold text-blue-600 mb-4">.com</h3>
+            <p className="text-xl font-bold text-gray-800 mb-4">Rs 2099 / year</p>
+            <p className="text-md text-gray-600 mb-4">
+              .COM is highly recognized and trusted, instantly adding credibility to your website.
+            </p>
+            <button className="py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg w-full">
+              Register
+            </button>
+          </div>
+
+          {/* .net Card */}
+          <div className="bg-white border 0 p-6 rounded-lg shadow-lg text-center">
+            <h3 className="text-2xl font-bold text-blue-600 mb-4">.net</h3>
+            <p className="text-xl font-bold text-gray-800 mb-4">Rs 2500 / year</p>
+            <p className="text-md text-gray-600 mb-4">
+              A widely used domain suffix for networks and enterprises.
+            </p>
+            <button className="py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg w-full">
+              Register
+            </button>
+          </div>
+
+          {/* .org Card */}
+          <div className="bg-white border p-6 rounded-lg shadow-lg text-center">
+            <h3 className="text-2xl font-bold text-blue-600 mb-4">.org</h3>
+            <p className="text-xl font-bold text-gray-800 mb-4">Rs 2000 / year</p>
+            <p className="text-md text-gray-600 mb-4">
+              .ORG is widely used for organization and community.
+            </p>
+            <button className="py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg w-full">
+              Register
+            </button>
+          </div>
+        </div>
+      </div>
+
 
       <Footer />
     </div>

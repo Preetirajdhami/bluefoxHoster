@@ -4,9 +4,16 @@ import Footer from '../_components/Footer';
 import React, { useState } from "react";
 import Wordpressimage from '../_components/Wordpressimage';
 import { FaCircle } from "react-icons/fa";
+import WordpressDetailedPricing from '../_components/WordpressDetailedPricing'
 
 const WordpressHosting = () => {
   const [isYearly, setIsYearly] = useState(true);
+  const scrollToPricing = () => {
+    document.getElementById('pricing-section').scrollIntoView({ behavior: 'smooth' });
+};
+ 
+
+
   const plans = [
     {
       title: 'Wp Lite',
@@ -97,7 +104,7 @@ const WordpressHosting = () => {
 
       <div className='2xl:px-56 px-8 mt-14'>
         <div>
-          <h2 className='text-5xl font-medium text-gray-800'> Choose a plan that suits your business </h2>
+          <h2 className='text-5xl font-semibold text-gray-800'> Choose a plan that suits your business </h2>
           <div className="flex justify-center items-center mt-6">
             <span className="text-gray-500">Monthly</span>
             <label className="mx-2 relative inline-flex items-center cursor-pointer">
@@ -143,26 +150,38 @@ const WordpressHosting = () => {
                   </li>
                 ))}
               </ul>
-              <button className="mt-4 w-full py-2 text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition">
+              <button
+                className="mt-4 w-full py-2 text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition"
+                onClick={scrollToPricing}
+               
+              >
                 View Full Features
               </button>
             </div>
           ))}
         </div>
 
-       
-        <div>
-          <h2 className='text-5xl font-bold text-gray-800 mt-16 mb-14'>Why Choose Our Hosting?</h2>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="p-6 rounded-lg shadow-md bg-white">
-                <h3 className="text-lg font-semibold text-blue-900">{feature.title}</h3>
-                <p className="text-gray-600 mt-2">{feature.description}</p>
-              </div>
-            ))}
-          </div>
+
+
+      </div>
+
+      <div className='px-8 2xl:px-56 pb-20'
+        style={{
+          background: 'linear-gradient(93.2deg, rgba(10, 40, 100, 1) 14.4%, rgba(24, 95, 246, 1) 90.8%)',
+        }}
+      >
+        <h2 className='text-5xl font-bold text-center pt-8 text-white mt-16 mb-14'>Why Choose Our Hosting?</h2>
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8  ">
+          {features.map((feature, index) => (
+            <div key={index} className="p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300 bg-white">
+              <h3 className="text-lg font-semibold text-blue-900">{feature.title}</h3>
+              <p className="text-gray-600 mt-2">{feature.description}</p>
+            </div>
+          ))}
         </div>
       </div>
+
+      <WordpressDetailedPricing />
 
       <Footer />
     </div>

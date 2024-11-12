@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
-const WebhostingDetailedPricing = () => {
+const WordpressDetailedPricing = () => {
     const [billingCycle, setBillingCycle] = useState('monthly');
-
+  
 
 
 
@@ -21,49 +21,46 @@ const WebhostingDetailedPricing = () => {
     const faqItems = [
 
         {
-            question: "What is Web Hosting",
-            answer: "Web hosting is a service that allows individuals and organizations to make their websites accessible on the internet "
+            question: "What is WordPress Hosting?",
+            answer: "WordPress hosting is a specialized hosting service designed for WordPress websites. It includes features optimized for WordPress performance, such as automatic updates, enhanced security, and seamless integration with the WordPress platform. "
         },
         {
-            question: "How do i choose the best web hosting plan ? ",
-            answer: "To choose the best web hosting plan, assess your website's needs, such as traffic, resources, and budget. Shared hosting is affordable for small sites, while VPS or dedicated hosting suits larger sites with higher traffic. Cloud hosting offers flexibility and scalability. Consider support, uptime guarantees, and essential features like security and backups. Compare pricing and renewal rates to find the best value for your needs."
+            question: "How do I choose the best WordPress hosting plan? ",
+            answer: "When selecting a WordPress hosting plan, consider your website's needs such as traffic, performance, security, and budget. Key features to look for include automatic WordPress updates, daily backups, security measures like firewalls and SSL certificates, and scalability for future growth. Make sure the hosting plan fits your site's size and provides enough resources for performance​"
         },
-        {
-            question: "Can I upgrade my hosting plan as my website grows?",
-            answer: "Absolutely! As your website grows and its needs change, we offer flexible hosting plans that can be easily upgraded. Whether you need more storage, bandwidth, or control over your server, we provide seamless transitions from shared hosting to VPS or dedicated servers. Our team is here to assist you with the upgrade process, ensuring minimal downtime and a smooth experience. "
-        },
+        
         {
             question: "How do you ensure website security and data protection?",
-            answer: "We prioritize your website’s security with SSL certificates, firewalls, regular malware scans, and automated backups. Our servers are monitored 24/7, and we use encryption protocols to protect your data. We continually update our systems to safeguard against emerging threats and ensure your website remains secure."
+            answer: " WordPress hosting services typically provide enhanced security features such as SSL certificates, firewalls, malware scanning, and DDoS protection. Regular updates and backups also ensure that your site remains secure, even in the face of emerging threats"
         },
         {
             question: "What level of customer support can I expect from your hosting service?",
-            answer: "Our hosting service offers 24/7 customer support through multiple channels, including live chat, email, and phone. Our knowledgeable support team is ready to assist with any technical issues, setup questions, or concerns you may have, ensuring that your website runs smoothly at all times. We aim to provide prompt and effective solutions, no matter the complexity of your request."
+            answer: " Quality WordPress hosting services offer 24/7 customer support via multiple channels like live chat, email, and phone. Support is available to assist with troubleshooting, site management, and any technical issues you may encount"
         }
     ];
 
 
     const plans = [
         {
-            planName: 'Alpha Cloud',
+            planName: 'Wp Lite',
             feature: 'Lightning fast NVMe powered web hosting backed by 24/7 support',
-            monthlyPrice: 10,
-            annualPrice: 100,
-            biennialPrice: 180,
+            monthlyPrice: 600,
+            annualPrice: 5000,
+            biennialPrice: 80000,
         },
         {
-            planName: 'Beta Cloud',
-            feature: 'Lightning fast SSD powered web hosting backed by 24/7 support',
-            monthlyPrice: 20,
-            annualPrice: 200,
-            biennialPrice: 360,
+            planName: 'Wp Standard',
+            feature: 'Lightning fast NVMe powered web hosting backed by 24/7 support',
+            monthlyPrice: 1000,
+            annualPrice: 10000,
+            biennialPrice: 18000,
         },
         {
-            planName: 'Enterprise',
+            planName: 'Wp Ultimate',
             feature: 'Lightning fast NVMe powered web hosting backed by 24/7 support',
-            monthlyPrice: 50,
-            annualPrice: 500,
-            biennialPrice: 900,
+            monthlyPrice: 2000,
+            annualPrice: 20000,
+            biennialPrice: 35000,
         }
     ];
 
@@ -87,8 +84,8 @@ const WebhostingDetailedPricing = () => {
     return (
         <div id="pricing-section" className='bg-gray-100 py-20 px-8 2xl:px-56'>
             <div className="flex flex-col items-center justify-center mb-12">
-                <h1 className="text-4xl font-semibold text-gray-700 mb-4">Choose the Web Hosting Plan for You</h1>
-                <h2 className="text-xl text-gray-700 mb-8">Our web hosting plans are perfectly curated, offering unbeatable features at an incredible price.</h2>
+                <h1 className="text-5xl font-semibold text-gray-700 mb-4">Detailed Pricing and Features</h1>
+                <h2 className="text-xl text-center text-gray-700 mb-8">Get a clear understanding of our pricing details and the robust range of features included, designed to empower you with flexible hosting solutions.</h2>
 
                 <div className="flex items-center mb-6 rounded-lg"
                     style={{
@@ -374,10 +371,10 @@ const WebhostingDetailedPricing = () => {
             <div className="flex flex-col mb-16 md:flex-row gap-10 pt-9">
 
                 <div className="flex-1 p-6  bg-gray-100 rounded-lg shadow-lg">
-                    <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold  text-gray-700 mb-4">Have Inquiries?
-                    We have a best hosting solution.</h2>
+                    <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold  text-gray-700 mb-4">Frequently Asked Questions
+                    </h2>
                     <p className="text-gray-600  mb-6">
-                    Our hosting solutions are tailored to accommodate the unique requirements of every website, delivering exceptional speed, consistent reliability, and effortless scalability.
+                    Our WordPress hosting solutions are crafted to provide exceptional performance, top-tier security, and seamless scalability, ensuring your WordPress site operates at its best, no matter how much traffic you experience. 
                     </p>
                     <button className="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-200">
                         Contact Now
@@ -414,4 +411,4 @@ const WebhostingDetailedPricing = () => {
     );
 };
 
-export default WebhostingDetailedPricing;
+export default WordpressDetailedPricing;
