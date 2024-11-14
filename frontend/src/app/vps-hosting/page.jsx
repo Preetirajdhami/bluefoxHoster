@@ -100,25 +100,27 @@ const VpsHosting = () => {
         </div>
       </div>
 
-      <div className='px-8 2xl:px-56'>
+
+      {/* MOre Reasons to choose VPS */}
+      <div className='px-8 2xl:px-56 '>
         <div className='text-center text-4xl text-gray-800 font-bold pt-14'>
           More Reasons To Choose VPS Hosting
           for your projects
         </div>
         <div>
 
-        <h2 className="text-3xl font-bold text-center text-gray-700 mt-14 mb-1">
-                Extreme Performance
-              </h2>
-              <p className='text-gray-600 text-center'>
-                Our VPS hosting solutions in Nepal are designed to meet the most demanding requirements, delivering unparalleled performance.
-              </p>
-          
+          <h2 className="text-3xl font-bold text-center text-gray-700 mt-14 mb-1">
+            Extreme Performance
+          </h2>
+          <p className='text-gray-600 text-center'>
+            Our VPS hosting solutions in Nepal are designed to meet the most demanding requirements, delivering unparalleled performance.
+          </p>
+
           <div className="flex flex-col md:flex-row  p-8 ">
 
 
             <div className="flex-1 flex flex-col items-start mb-6 md:mb-0 md:pr-10">
-              
+
 
               <div className=" max-[500px]:hidden">
                 <VpsImage2 />
@@ -217,7 +219,64 @@ const VpsHosting = () => {
 
       </div>
 
+      {/*Think Global, Host Local*/}
+      <div className=''
+        style={{
+          background: 'linear-gradient(93.2deg, rgba(10, 40, 100, 1) 14.4%, rgba(24, 95, 246, 1) 90.8%)',
+        }}
+      >
+        <div className='px-8 2xl:px-56'>
+          <h1 className='text-white text-5xl font-bold pt-14 text-center'>Think Global, Host Local</h1>
+          <p className='text-white text-base pt-6 text-center'> At Blue Fox Hoster, we believe in bringing your online presence closer to home, ensuring unparalleled speeds and reliable connections for your website.</p>
 
+        </div>
+
+        <div className="py-16 px-6 sm:px-8 md:px-12 2xl:px-56">
+          <div className="mx-auto bg-white rounded-2xl shadow-lg p-8 sm:p-12 grid gap-8 sm:gap-12 grid-cols-1 md:grid-cols-3 text-left">
+            {/* Nepal Server */}
+            <div className="px-4 sm:px-6">
+              <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-gray-700">Nepal Server</h3>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                With our dedicated servers in Nepal, enjoy top-notch hosting. Reliable performance and a local experience guarantee your website functions flawlessly, regardless of traffic.
+              </p>
+            </div>
+
+            {/* Closest Server To You */}
+            <div className="px-4 sm:px-6 md:px-12 md:border-l md:border-gray-200">
+              <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-gray-700">Closest Server To You</h3>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                Opt for the closest server to you instead of distant ones. Our data centers are strategically positioned to provide the lowest latency and highest uptime possible. Stay in touch with your audience effortlessly.
+              </p>
+            </div>
+
+            {/* Server Information */}
+            <div className="px-4 sm:px-6 md:border-l md:px-12 md:border-gray-200">
+              <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-gray-700">Server Information</h3>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                Check out our state-of-the-art server options that can accommodate any requirement. We provide top-notch technology and expert support for everything from security to scalability.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+          {/*world map*/}
+        <div className="flex items-center justify-center pb-16">
+          <img
+            src="/images/world-map.svg"
+            alt="World Map"
+            width="1110"
+            height="544"
+            className="text-transparent"
+          />
+        </div>
+
+      </div>
+
+
+      {/*FAQs*/}
 
       <div className="flex flex-col mb-16 md:flex-row gap-10 px-8 2xl:px-56 pt-9">
 

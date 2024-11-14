@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { FaCheckCircle, FaCircle } from "react-icons/fa";
 import { IoIosInformationCircleOutline } from "react-icons/io";
+import WebHostingImage5 from './WebHostingImage5';
 
 
 const HostingPlanCard = ({ title, monthlyPrice, yearlyPrice, features, isYearly }) => {
@@ -69,55 +70,89 @@ const WebHostingCard = () => {
     ];
 
     return (
-        <div className='bg-gray-50 pt-10 px-6 text-center'>
-            <h2 className="text-5xl font-medium text-gray-700" style={{ color: '#0073b3' }}>Best Cloud Hosting Plans</h2>
-            <p className="text-gray-500 mt-2">
-                Join the thousands who trust our top-rated web hosting in Nepal. Choose the best web hosting package that best fits your needs.
-            </p>
+        <div>
+            <div className='bg-gray-50 pt-10 2xl:px-56 px-8 text-center'>
+                <h2 className="text-5xl font-medium text-gray-700" style={{ color: '#0073b3' }}>Best Cloud Hosting Plans</h2>
+                <p className="text-gray-500 mt-2">
+                    Join the thousands who trust our top-rated web hosting in Nepal. Choose the best web hosting package that best fits your needs.
+                </p>
 
-            <div className="flex justify-center items-center gap-2 mt-4">
-                <div className="flex items-center">
-                    <span className="text-green-500">★★★★★</span>
-                    <span className="ml-2 text-gray-500">4.8 out on 100+ reviews</span>
+                <div className="flex justify-center items-center gap-2 mt-4">
+                    <div className="flex items-center">
+                        <span className="text-green-500">★★★★★</span>
+                        <span className="ml-2 text-gray-500">4.8 out on 100+ reviews</span>
+                    </div>
+                    <a href="#" className="text-indigo-600 hover:underline">See Reviews &rarr;</a>
                 </div>
-                <a href="#" className="text-indigo-600 hover:underline">See Reviews &rarr;</a>
-            </div>
 
-            <div className="flex justify-center items-center mt-6">
-                <span className="text-gray-500">Monthly</span>
-                <label className="mx-2 relative inline-flex items-center cursor-pointer">
-                    <input
-                        type="checkbox"
-                        checked={isYearly}
-                        onChange={() => setIsYearly(!isYearly)}
-                        className="sr-only peer"
-                    />
-                    <div className="w-11 h-6 bg-gray-300 peer-focus:outline-none rounded-full peer peer-checked:bg-gray-700"></div>
-                    <span className="absolute left-0.5 top-0.5 peer-checked:left-5 transition-all duration-300">
-                        <FaCircle className="text-white w-5 h-5" />
-                    </span>
-                </label>
-                <span className="text-gray-500">Yearly</span>
-            </div>
-
-            <div className="flex justify-center items-center mt-6 space-x-12">
-                <div>
-                    <h3 className="text-xl font-semibold text-gray-700">Standard</h3>
-                    <hr className="border-blue-500 w-20 mt-2" />
+                <div className="flex justify-center items-center mt-6">
+                    <span className="text-gray-500">Monthly</span>
+                    <label className="mx-2 relative inline-flex items-center cursor-pointer">
+                        <input
+                            type="checkbox"
+                            checked={isYearly}
+                            onChange={() => setIsYearly(!isYearly)}
+                            className="sr-only peer"
+                        />
+                        <div className="w-11 h-6 bg-gray-300 peer-focus:outline-none rounded-full peer peer-checked:bg-gray-700"></div>
+                        <span className="absolute left-0.5 top-0.5 peer-checked:left-5 transition-all duration-300">
+                            <FaCircle className="text-white w-5 h-5" />
+                        </span>
+                    </label>
+                    <span className="text-gray-500">Yearly</span>
                 </div>
+
+                <div className="flex justify-center items-center mt-6 space-x-12">
+                    <div>
+                        <h3 className="text-xl font-semibold text-gray-700">Standard</h3>
+                        <hr className="border-blue-500 w-20 mt-2" />
+                    </div>
+                </div>
+
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 p-3 mt-2 md:px-8 pt-8 bg-white">
+                    {plans.map((plan, index) => (
+                        <HostingPlanCard key={index} {...plan} isYearly={isYearly} />
+                    ))}
+
+
+                </div>
+                <div className='pt-4 pb-4'>
+                    <h1 className='cursor-pointer border-2 border-blue-500 inline-block px-4 py-2 rounded-lg text-gray-700 hover:bg-blue-50' onClick={scrollToPricing}>
+                        Compare Web Hosting Plans
+                    </h1>
+                </div>
+
             </div>
 
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 p-3 mt-2 md:px-8 pt-8 bg-white">
-                {plans.map((plan, index) => (
-                    <HostingPlanCard key={index} {...plan} isYearly={isYearly} />
-                ))}
+            {/*Outstanding support section */}
+            <div>
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6 px-8 2xl:px-56 ">
+                    
+                    
+                    <div className="md:w-1/2  py-28 px-8 rounded-lg">
+                        <h2 className="text-4xl font-bold text-gray-700 mb-4">
+                            Outstanding 24/7 Expert Hosting Support
+                        </h2>
+                        <p className="text-gray-600 mb-6">
+                            Our hosting support team is always ready to assist, from choosing hosting plans to ensuring your website runs smoothly.
+                        </p>
+                        <a
+                            href="#"
+                            className="inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition duration-200"
+                        >
+                            Contact Now
+                        </a>
+                    </div>
 
+                   
+                    <div className="md:w-1/2   rounded-lg flex items-center justify-center">
 
-            </div>
-            <div className='pt-4 pb-4'>
-                <h1 className='cursor-pointer border-2 border-blue-500 inline-block px-4 py-2 rounded-lg text-gray-700 hover:bg-blue-50' onClick={scrollToPricing}>
-                    Compare Web Hosting Plans
-                </h1>
+                    <WebHostingImage5 />
+                    
+                       
+                    </div>
+                </div>
+
             </div>
 
         </div>

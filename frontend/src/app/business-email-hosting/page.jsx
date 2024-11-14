@@ -4,9 +4,10 @@ import BusinessEmailHostingImage from '../_components/BusinessEmailHostingImage'
 import Header from '../_components/Header';
 import Footer from '../_components/Footer';
 import { FaShieldAlt, FaCloud, FaEnvelope, FaUserShield, FaCircle } from 'react-icons/fa';
-import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
+
 import BusinessEmailHostingImage2 from '../_components/BusinessEmailHostingImage2';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import BusinessEmailPricing from '../_components/BusinessEmailPricing'
 
 const emailFeatures = [
   {
@@ -31,135 +32,10 @@ const emailFeatures = [
   },
 ];
 
-const pricingPlans = {
-  monthly: [
-    {
-      title: "Starter",
-      price: 2500,
-      features: [
-        "Email API, SMTP relay, webhooks",
-        "Tracking and Analytics",
-        "Webmail",
-        "Mobile Sync",
-        "Auto-responders",
-        "Advanced Calendar & more"
-      ],
-      advanced_feature: [
-        "POP & IMAP Access",
-        "TLS Support",
-        "Last Login IP",
-        "Antivirus Check",
-        "Advanced Anti-Spam"
-      ],
-      label: "Order Now"
-    },
-    {
-      title: "Premium",
-      price: 4500,
-      features: [
-        "Email API, SMTP relay, webhooks",
-        "Tracking and Analytics",
-        "Webmail",
-        "Mobile Sync",
-        "Auto-responders",
-        "Advanced Calendar & more"
-      ],
-      advanced_feature: [
-        "POP & IMAP Access",
-        "TLS Support",
-        "Last Login IP",
-        "Antivirus Check",
-        "Advanced Anti-Spam"
-      ],
-      label: "Order Now"
-    },
-    {
-      title: "Enterprise",
-      price: 7500,
-      features: [
-        "Email API, SMTP relay, webhooks",
-        "Tracking and Analytics",
-        "Webmail",
-        "Mobile Sync",
-        "Auto-responders",
-        "Advanced Calendar & more"
-      ],
-      advanced_feature: [
-        "POP & IMAP Access",
-        "TLS Support",
-        "Last Login IP",
-        "Antivirus Check",
-        "Advanced Anti-Spam"
-      ],
-      label: "Order Now"
-    },
-  ],
-  annually: [
-    {
-      title: "Starter",
-      price: 15000,
-      features: [
-        "Email API, SMTP relay, webhooks",
-        "Tracking and Analytics",
-        "Webmail",
-        "Mobile Sync",
-        "Auto-responders",
-        "Advanced Calendar & more"
-      ],
-      advanced_feature: [
-        "POP & IMAP Access",
-        "TLS Support",
-        "Last Login IP",
-        "Antivirus Check",
-        "Advanced Anti-Spam"
-      ],
-      label: "Order Now"
-    },
-    {
-      title: "Premium",
-      price: 30000,
-      features: [
-        "Email API, SMTP relay, webhooks",
-        "Tracking and Analytics",
-        "Webmail",
-        "Mobile Sync",
-        "Auto-responders",
-        "Advanced Calendar & more"
-      ],
-      advanced_feature: [
-        "POP & IMAP Access",
-        "TLS Support",
-        "Last Login IP",
-        "Antivirus Check",
-        "Advanced Anti-Spam"
-      ],
-      label: "Order Now"
-    },
-    {
-      title: "Enterprise",
-      price: 75000,
-      features: [
-        "Email API, SMTP relay, webhooks",
-        "Tracking and Analytics",
-        "Webmail",
-        "Mobile Sync",
-        "Auto-responders",
-        "Advanced Calendar & more"
-      ],
-      advanced_feature: [
-        "POP & IMAP Access",
-        "TLS Support",
-        "Last Login IP",
-        "Antivirus Check",
-        "Advanced Anti-Spam"
-      ],
-      label: "Order Now"
-    },
-  ],
-};
+
 
 const BusinessEmailHosting = () => {
-  const [isAnnual, setIsAnnual] = useState(false);
+  
 
   const [openQuestion, setOpenQuestion] = useState(null);
   const toggleQuestion = (index) => {
@@ -194,9 +70,7 @@ const BusinessEmailHosting = () => {
   ];
 
 
-  const toggleBillingCycle = () => {
-    setIsAnnual(prevState => !prevState);
-  };
+  
 
   return (
     <div>
@@ -252,63 +126,7 @@ const BusinessEmailHosting = () => {
         </div>
       </div>
 
-      {/* Pricing Section */}
-      <div className="py-14 px-8 2xl:px-56">
-        <h2 className='text-5xl font-medium text-gray-800 text-center' style={{ color: '#0073b3' }}>Choose a plan that suits your business</h2>
-        <div className="flex justify-center items-center mt-6">
-          <span className="text-gray-500">Monthly</span>
-          <label className="mx-2 relative inline-flex items-center cursor-pointer">
-            <input
-              type="checkbox"
-              checked={isAnnual}
-              onChange={toggleBillingCycle}
-              className="sr-only peer"
-            />
-            <div className="w-11 h-6 bg-gray-300 peer-focus:outline-none rounded-full peer peer-checked:bg-gray-700"></div>
-            <span className="absolute left-0.5 top-0.5 peer-checked:left-5 transition-all duration-300">
-              <FaCircle className="text-white w-5 h-5" />
-            </span>
-          </label>
-          <span className="text-gray-500">Yearly</span>
-        </div>
-
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 mb-9">
-          {pricingPlans[isAnnual ? 'annually' : 'monthly'].map((plan, index) => (
-            <div key={index} className="bg-white border border-gray-300 p-6 rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-102">
-              <h3 className="text-2xl font-semibold text-center mb-4">{plan.title}</h3>
-              <p className="text-xl font-bold text-center text-blue-600 mb-4">{`₨ ${plan.price}`}</p>
-
-              <div className="text-center mb-6">
-                <h4 className="text-lg font-medium text-gray-800 mb-2">Features:</h4>
-                <ul className="list-none space-y-2 text-left pl-4">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-700">
-                      <IoMdCheckmarkCircleOutline className="text-green-500 text-xl mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="text-center mb-6">
-                <h4 className="text-lg font-medium text-gray-800 mb-2">Advanced Features:</h4>
-                <ul className="list-none space-y-2 text-left pl-4">
-                  {plan.advanced_feature.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-700">
-                      <IoMdCheckmarkCircleOutline className="text-green-500 text-xl mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <button className="w-full text-white bg-blue-600 py-2 rounded-lg hover:bg-blue-800 transition duration-200">
-                {plan.label}
-              </button>
-            </div>
-          ))}
-        </div>
-      </div>
+      <BusinessEmailPricing />
 
       <div className="py-14 px-8 2xl:px-56"
         style={{

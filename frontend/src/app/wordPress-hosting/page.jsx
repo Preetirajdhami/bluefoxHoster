@@ -10,8 +10,8 @@ const WordpressHosting = () => {
   const [isYearly, setIsYearly] = useState(true);
   const scrollToPricing = () => {
     document.getElementById('pricing-section').scrollIntoView({ behavior: 'smooth' });
-};
- 
+  };
+
 
 
   const plans = [
@@ -153,7 +153,7 @@ const WordpressHosting = () => {
               <button
                 className="mt-4 w-full py-2 text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition"
                 onClick={scrollToPricing}
-               
+
               >
                 View Full Features
               </button>
@@ -178,6 +178,24 @@ const WordpressHosting = () => {
               <p className="text-gray-600 mt-2">{feature.description}</p>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className=" px-8  2xl:px-56 pt-12 bg-slate-200">
+        <div>
+          <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-700 ">
+            WordPress hosting crafted to your needs
+          </h1>
+          <p className="pt-5 text-gray-600 text-sm sm:text-base  mx-auto leading-relaxed">
+            Experience unmatched WordPress hosting with Blue Fox Hoster, celebrated for its blazing speed, rock-solid reliability, and a user-first approach tailored for developers and businesses alike.
+          </p>
+        </div>
+        <div className="flex items-center pt-8 md:px-20 justify-center pb-16">
+          <img
+            src="/images/wordpress-features.svg"
+            alt="WordPress Features"
+            className="w-full "
+          />
         </div>
       </div>
 

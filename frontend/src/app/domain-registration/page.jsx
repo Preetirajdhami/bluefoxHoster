@@ -3,6 +3,7 @@ import Header from "../_components/Header";
 import Footer from "../_components/Footer";
 import WhydomainReg from "../_components/WhydomainReg";
 import { FaCog, FaShieldAlt, FaLock, FaExchangeAlt } from "react-icons/fa";
+import DomainExtension from '../_components/DomainExtension';
 
 function DomainRegistration() {
   return (
@@ -10,7 +11,7 @@ function DomainRegistration() {
       <Header />
 
       <div
-        className="flex flex-col items-center justify-center min-h-screen overflow-x-hidden text-white bg-custom-gradient py-8 2xl:px-56 px-8"
+        className="flex flex-col items-center justify-center py-40 overflow-x-hidden text-white bg-custom-gradient  2xl:px-56 px-8"
         style={{
           background:
             "linear-gradient(93.2deg, rgba(10, 40, 100, 1) 14.4%, rgba(24, 95, 246, 1) 90.8%)",
@@ -224,7 +225,8 @@ function DomainRegistration() {
           </div>
         </div>
       </div>
-
+        
+      <DomainExtension />
 
       <Footer />
     </div>
