@@ -133,7 +133,7 @@ const BusinessEmailHosting = () => {
           background: 'linear-gradient(93.2deg, rgba(10, 40, 100, 1) 14.4%, rgba(24, 95, 246, 1) 90.8%)',
         }}>
         <div className="flex flex-col justify-center space-y-7">
-          <h2 className="text-5xl text-center text-white font-semibold" >
+          <h2 className="text-5xl text-center  text-white font-semibold" >
             Key Features of Business Email Hosting
           </h2>
           <p className=" text-white text-center">

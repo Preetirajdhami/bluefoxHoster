@@ -6,7 +6,9 @@ import Footer from "./_components/Footer";
 import TrustedBySection from "./_components/TrustedBySection";
 import HostingPlansCard from "./_components/HostingPlansCard";
 import HostingFeature from "./_components/HostingFeature";
-import RegisterDomain from "./_components/RegisterDomain"; import Services from './_components/Services';
+import RegisterDomain from "./_components/RegisterDomain"; 
+import Services from './_components/Services';
+import TrustedClients from './_components/OurTrustedClients' ;
 
 export default function Home() {
   return (
@@ -21,6 +23,7 @@ export default function Home() {
     <HostingPlansCard/>
     <Services />
     <HostingFeature />
+    <TrustedClients />
     <Footer/>
 
    </div>

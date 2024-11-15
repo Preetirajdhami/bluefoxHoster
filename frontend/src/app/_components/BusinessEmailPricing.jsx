@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-import { FaCircle } from "react-icons/fa";
 
 const BusinessEmailPricing = () => {
     const [billingCycle, setBillingCycle] = useState("monthly");
     const [currency, setCurrency] = useState("NPR");
 
+    // Conversion rates (dummy data)
+    const currencyRates = {
+        NPR: 1, // Base currency
+        INR: 0.625,
+        USD: 0.0076,
+    };
+
+    // Pricing plans with base prices in NPR
     const pricingPlans = {
         monthly: [
             {
@@ -69,11 +76,10 @@ const BusinessEmailPricing = () => {
                 label: "Order Now",
             },
         ],
-
         annually: [
             {
                 title: "Starter",
-                price: 25000, 
+                price: 25000,
                 features: [
                     "Email API, SMTP relay, webhooks",
                     "Tracking and Analytics",
@@ -93,7 +99,7 @@ const BusinessEmailPricing = () => {
             },
             {
                 title: "Premium",
-                price: 45000, 
+                price: 45000,
                 features: [
                     "Email API, SMTP relay, webhooks",
                     "Tracking and Analytics",
@@ -113,7 +119,7 @@ const BusinessEmailPricing = () => {
             },
             {
                 title: "Enterprise",
-                price: 75000, 
+                price: 75000,
                 features: [
                     "Email API, SMTP relay, webhooks",
                     "Tracking and Analytics",
@@ -132,11 +138,10 @@ const BusinessEmailPricing = () => {
                 label: "Order Now",
             },
         ],
-
         biennially: [
             {
                 title: "Starter",
-                price: 50000, 
+                price: 50000,
                 features: [
                     "Email API, SMTP relay, webhooks",
                     "Tracking and Analytics",
@@ -156,7 +161,7 @@ const BusinessEmailPricing = () => {
             },
             {
                 title: "Premium",
-                price: 90000, 
+                price: 90000,
                 features: [
                     "Email API, SMTP relay, webhooks",
                     "Tracking and Analytics",
@@ -176,7 +181,7 @@ const BusinessEmailPricing = () => {
             },
             {
                 title: "Enterprise",
-                price: 150000, 
+                price: 150000,
                 features: [
                     "Email API, SMTP relay, webhooks",
                     "Tracking and Analytics",
@@ -197,8 +202,14 @@ const BusinessEmailPricing = () => {
         ],
     };
 
-
+    // Update billing cycle
     const updatePrice = (cycle) => setBillingCycle(cycle);
+
+    // Calculate converted price
+    const getConvertedPrice = (price) => {
+        const rate = currencyRates[currency];
+        return Math.round(price * rate);
+    };
 
     return (
         <div>
@@ -211,8 +222,7 @@ const BusinessEmailPricing = () => {
                 </h2>
 
                 {/* Billing and Currency Section */}
-                <div className="flex justify-between items-center mt-8">
-                   
+                <div className="flex flex-col md:flex-row justify-between items-center mt-8">
                     <div
                         className="flex items-center mb-6 rounded-lg"
                         style={{
@@ -221,42 +231,39 @@ const BusinessEmailPricing = () => {
                         }}
                     >
                         <div className="flex space-x-4 py-3 px-3">
-                            <button
-                                onClick={() => updatePrice("monthly")}
-                                className={`px-3 py-2 rounded-md ${billingCycle === "monthly" ? "bg-white text-black" : "text-white"
-                                    }`}
-                            >
-                                Monthly
-                            </button>
-                            <button
-                                onClick={() => updatePrice("annually")}
-                                className={`px-3 py-2 rounded-md ${billingCycle === "annually" ? "bg-white text-black" : "text-white"
-                                    }`}
-                            >
-                                Annually
-                            </button>
-                            <button
-                                onClick={() => updatePrice("biennially")}
-                                className={`px-3 py-2 rounded-md ${billingCycle === "biennially" ? "bg-white text-black" : "text-white"
-                                    }`}
-                            >
-                                Biennially
-                            </button>
+                            {["monthly", "annually", "biennially"].map((cycle) => (
+                                <button
+                                    key={cycle}
+                                    onClick={() => updatePrice(cycle)}
+                                    className={`px-3 py-2 rounded-md ${billingCycle === cycle ? "bg-white text-black" : "text-white"
+                                        }`}
+                                >
+                                    {cycle.charAt(0).toUpperCase() + cycle.slice(1)}
+                                </button>
+                            ))}
                         </div>
                     </div>
 
-                    {/* Currency Selector */}
-                    <div className="flex items-center">
-                        <label className="mr-3 text-gray-700 font-medium">Currency:</label>
-                        <select
-                            value={currency}
-                            onChange={(e) => setCurrency(e.target.value)}
-                            className="py-2 px-4 border border-gray-300 rounded-md focus:outline-none"
-                        >
-                            <option value="NPR">NPR</option>
-                            <option value="INR">INR</option>
-                            <option value="USD">USD</option>
-                        </select>
+                    {/* Currency Toggle */}
+                    <div
+                        className="flex items-center px-10 mb-6 rounded-lg"
+                        style={{
+                            background:
+                                "linear-gradient(93.2deg, rgba(10, 40, 100, 1) 0%, rgba(24, 95, 246, 1) 80%)",
+                        }}
+                    >
+                        <div className="flex space-x-4 py-3 px-3">
+                            {["NPR", "INR", "USD"].map((curr) => (
+                                <button
+                                    key={curr}
+                                    onClick={() => setCurrency(curr)}
+                                    className={`px-3 py-2 rounded-md ${currency === curr ? "bg-white text-black" : "text-white"
+                                        }`}
+                                >
+                                    {curr}
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
@@ -267,13 +274,13 @@ const BusinessEmailPricing = () => {
                             key={index}
                             className="bg-white border border-gray-300 p-6 rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-102"
                         >
-                            <h3 className="text-2xl font-semibold text-center mb-4">
+                            <h3 className="text-3xl text-gray-700 font-bold text-center mb-4">
                                 {plan.title}
                             </h3>
-                            <p className="text-xl font-bold text-center text-blue-600 mb-4">{`₨ ${plan.price}`}</p>
+                            <p className="text-xl font-bold text-center text-blue-600 mb-4">{`${currency} ${getConvertedPrice(plan.price)}`}</p>
 
-                            <div className="text-center mb-6">
-                                <h4 className="text-lg font-medium text-gray-800 mb-2">
+                            <div className=" mb-6">
+                                <h4 className="text-lg px-4 font-medium text-gray-800 mb-2">
                                     Features:
                                 </h4>
                                 <ul className="list-none space-y-2 text-left pl-4">
@@ -289,8 +296,8 @@ const BusinessEmailPricing = () => {
                                 </ul>
                             </div>
 
-                            <div className="text-center mb-6">
-                                <h4 className="text-lg font-medium text-gray-800 mb-2">
+                            <div className=" mb-6">
+                                <h4 className="text-lg px-4 text-left font-medium text-gray-800 mb-2">
                                     Advanced Features:
                                 </h4>
                                 <ul className="list-none space-y-2 text-left pl-4">
@@ -306,9 +313,11 @@ const BusinessEmailPricing = () => {
                                 </ul>
                             </div>
 
-                            <button className="w-full text-white bg-blue-600 py-2 rounded-lg hover:bg-blue-800 transition duration-200">
-                                {plan.label}
-                            </button>
+                            <div className="text-center">
+                                <button className="bg-blue-500 text-white py-2 px-4 rounded-lg">
+                                    {plan.label}
+                                </button>
+                            </div>
                         </div>
                     ))}
                 </div>

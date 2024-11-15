@@ -221,8 +221,8 @@ export default function Header() {
 
           {/* Mobile Login and Register */}
           <div className="flex justify-center space-x-2 py-4">
-            <a href="/login" className="px-4 py-2 rounded-full bg-white text-blue-600 font-semibold hover:bg-blue-100 transition">Log In</a>
-            <a href="/register" className="px-4 py-2 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition">Register</a>
+            <a href="https://client.bluefoxhoster.com/dologin.php" className="px-4 py-2 rounded-full bg-white text-blue-600 font-semibold hover:bg-blue-100 transition">Log In</a>
+            <a href="https://client.bluefoxhoster.com/register.php" className="px-4 py-2 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition">Register</a>
           </div>
         </div>
       )}
