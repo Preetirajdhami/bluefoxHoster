@@ -22,8 +22,9 @@ export default function Home() {
     
     <HostingPlansCard/>
     <Services />
-    <HostingFeature />
     <TrustedClients />
+    <HostingFeature />
+    
     <Footer/>
 
    </div>

@@ -91,10 +91,10 @@ const HostingPlansCard = () => {
   return (
     <div className="2xl:px-56 px-8">
       <div>
-        <h1 className="text-center text-3xl md:text-5xl font-semibold">
+        <h1 className="text-center text-3xl md:text-5xl font-semibold"  style={{ color: '#1249bb' }}>
           Fully Managed Web Hosting in Nepal
         </h1>
-        <p className="mt-4 text-center">
+        <p className="mt-4 text-gray-500 text-center">
           Top-Tier Cloud Hosting powered by ultra-fast infrastructure and supported around the clock by expert Support Engineers.
         </p>
       </div>
@@ -126,10 +126,10 @@ const HostingPlansCard = () => {
                 <strong className="text-sm">UP TO 90% OFF</strong>
               </div>
               <div className="text-center md:text-left mt-8">
-                <h3 className="text-lg font-semibold text-center text-blue-500">
+                <h3 className="text-lg font-semibold text-center "  style={{ color: '#1553d7' }}>
                   {planKey.charAt(0).toUpperCase() + planKey.slice(1)} Web Hosting
                 </h3>
-                <p className="text-gray-700 mt-2 text-center">
+                <p className="text-gray-600 mt-2 text-center">
                   Host with confidence—trusted by 200,000 websites for reliable, secure, and high-performance hosting.
                 </p>
               </div>

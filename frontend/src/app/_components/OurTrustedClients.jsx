@@ -13,14 +13,14 @@ export default function TrustedClients() {
   ];
 
   return (
-    <div className="px-8 2xl:px-56">
+    <div className="px-8 pt-8 2xl:px-56">
       <div>
-        <h1 className="text-4xl 2xl:text-5xl text-gray-700 font-bold text-center pb-4">
+        <h1 className="text-4xl 2xl:text-5xl text-gray-700 font-bold text-center pb-6">
           Our Trusted Clients
         </h1>
       </div>
 
-      <div className="inline-flex w-full flex-nowrap overflow-hidden ">
+      <div className="inline-flex w-full border-y  flex-nowrap overflow-hidden ">
         <ul className="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8">
           {logos.map((logo, index) => (
             <li

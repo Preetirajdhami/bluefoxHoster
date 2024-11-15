@@ -6,10 +6,10 @@ import CpanelwhmLogo from './CpanelwhmLogo';
 
 const TrustedBySection = () => {
   return (
-    <div className="bg-gray-100 py-16 px-8">
+    <div className="bg-gray-100 pb-16 pt-10 px-8">
       <h2
-        className="text-3xl  md:text-4xl  font-medium md:font-semibold text-center"
-        style={{ color: '#0073b3' }}
+        className="text-3xl  md:text-5xl  font-semibold  text-center"
+        style={{ color: '#1249bb' }}
       >
         Blue Fox Hoster trusted by 10,000+ Websites
       </h2>

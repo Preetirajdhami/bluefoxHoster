@@ -13,6 +13,8 @@ module.exports = {
         
           colors: {
             customBlue: '#e2f4fe',
+            buttomBlue: "#1555db",
+            hoverBlue: '#0e3b96'
           },
         },
       },

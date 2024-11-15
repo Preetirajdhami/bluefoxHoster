@@ -24,7 +24,7 @@ const Services = () => {
                             <IoCheckmarkDoneCircle className="text-4xl text-blue-500" />
                         </div>
                     </div>
-                    <h3 className="text-lg font-semibold mb-2">99.9% Uptime Guarantee</h3>
+                    <h3 className="text-lg font-semibold mb-2 "  style={{ color: '#1555db' }}>99.9% Uptime Guarantee</h3>
                     <p>We do what we say. Free month if we fail.</p>
                 </div>
 
@@ -36,7 +36,7 @@ const Services = () => {
                         </div>
                     </div>
 
-                    <h3 className="text-lg font-semibold mb-2">Unlimited SSD & Bandwidth</h3>
+                    <h3 className="text-lg font-semibold mb-2" style={{ color: '#1555db' }}>Unlimited SSD & Bandwidth</h3>
                     <p>No limit on storage or bandwidth, focus on your website.</p>
                 </div>
 
@@ -48,7 +48,7 @@ const Services = () => {
                         </div>
                     </div>
 
-                    <h3 className="text-lg font-semibold mb-2">Money Back Guarantee</h3>
+                    <h3 className="text-lg font-semibold mb-2" style={{ color: '#1555db' }}>Money Back Guarantee</h3>
                     <p>Try our plans risk-free with a 30-day money-back guarantee.</p>
                 </div>
 
@@ -60,7 +60,7 @@ const Services = () => {
                         </div>
                     </div>
 
-                    <h3 className="text-lg font-semibold mb-2">24/7 Support</h3>
+                    <h3 className="text-lg font-semibold mb-2" style={{ color: '#1555db' }}>24/7 Support</h3>
                     <p>Our team is available to assist you anytime, anywhere.</p>
                 </div>
 
@@ -72,7 +72,7 @@ const Services = () => {
                         </div>
                     </div>
 
-                    <h3 className="text-lg font-semibold mb-2">Daily Backups</h3>
+                    <h3 className="text-lg font-semibold mb-2" style={{ color: '#1555db' }}>Daily Backups</h3>
                     <p>Your data is safe with our daily backup feature.</p>
                 </div>
 
@@ -87,7 +87,7 @@ const Services = () => {
                         </div>
                     </div>
 
-                    <h3 className="text-lg font-semibold mb-2">Easy Migration</h3>
+                    <h3 className="text-lg font-semibold mb-2" style={{ color: '#1555db' }}>Easy Migration</h3>
                     <p>Seamlessly migrate your website to our platform.</p>
                 </div>
             </div>

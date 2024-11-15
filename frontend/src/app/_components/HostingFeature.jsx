@@ -32,7 +32,7 @@ const HostingFeatures = () => {
   };
 
   const faqItems = [
-    
+
     {
       question: "Where is Blue Fox Hoster based",
       answer: "Blue Fox Hoster is a global web hosting company headquartered in Sunsari, Nepal. we proudly deliver reliable and high-quality hosting solutions worldwide. Recognized as a top provider in the industry, we are committed to innovation and enhancing our services to meet our clients' evolving needs "
@@ -61,7 +61,7 @@ const HostingFeatures = () => {
             className="bg-white rounded-lg shadow-lg p-6 w-full max-w-xs flex flex-col justify-between text-center"
           >
             <div className="flex justify-center mb-4">{feature.icon}</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+            <h3 className="text-xl font-semibold text-gray-700 mb-2">
               {feature.title}
             </h3>
             <p className="text-gray-500 flex-grow">{feature.description}</p>
@@ -73,15 +73,15 @@ const HostingFeatures = () => {
 
       <div className='flex flex-col mt-24 md:flex-row overflow-hidden '>
         <div>
-          <h1 className='text-4xl font-semibold text-left'
-            style={{ color: '#0073b3' }}>Real Worldwide Hosting with Blue Fox Hoster</h1>
-          <p className='mt-3 text-gray-700 '>We utilize multiple cloud infrastructure providers to deliver a top-tier, fast web hosting service that ensures global availability, regardless of your or your customers' location.</p>
+          <h1 className='text-4xl font-semibold xl:font-bold text-left'
+            style={{ color: '#1555db' }}>Real Worldwide Hosting with Blue Fox Hoster</h1>
+          <p className='mt-3 text-gray-600 '>We utilize multiple cloud infrastructure providers to deliver a top-tier, fast web hosting service that ensures global availability, regardless of your or your customers' location.</p>
           <div >
             <div className="flex items-center space-x-2  mt-5 mb-6  p-3  ">
-            <FaCheckCircle className="text-green-500" />
-            <div className=" text-sm font-medium text-gray-600">
-              All services are active
-            </div>
+              <FaCheckCircle className="text-green-500" />
+              <div className=" text-sm font-medium text-gray-600">
+                All services are active
+              </div>
             </div>
           </div>
 
@@ -92,18 +92,22 @@ const HostingFeatures = () => {
       </div>
 
       <div className="flex flex-col mb-16 md:flex-row gap-10">
-       
+
         <div className="flex-1 p-6 bg-gray-100 rounded-lg shadow-lg">
           <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold  text-gray-800 mb-4">Frequently Asked Questions</h2>
           <p className="text-gray-600  mb-6">
             Find answers to common questions. If you have any inquiries, feel free to reach out to us!
           </p>
-          <button className="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-200">
+          <a
+            href="/contact-us"
+            className="px-6 py-3  text-white rounded-full bg-colors-buttomBlue hover:bg-colors-hoverBlue transition duration-200"  
+          >
             Contact Now
-          </button>
+          </a>
+
         </div>
 
-        
+
         <div className="flex-2 p-6  bg-white rounded-lg shadow-lg">
           <div className="space-y-6">
             {faqItems.map((item, index) => (
@@ -129,7 +133,7 @@ const HostingFeatures = () => {
       </div>
     </div>
 
-    
+
   );
 };
 
