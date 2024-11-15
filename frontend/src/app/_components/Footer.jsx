@@ -38,7 +38,7 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-4">Support</h4>
             <ul>
-              {[{ name: "Customer Login", link: "/login" },
+              {[{ name: "Customer Login", link: "https://client.bluefoxhoster.com/dologin.php" },
               { name: "Raise a ticket", link: "#" },
               { name: "Server Status", link: "#" },
               { name: "Knowledge Base", link: "#" },
@@ -129,7 +129,7 @@ const Footer = () => {
           {/* Social Media Icons */}
           <div className="flex items-center space-x-4">
             <a
-              href="#"
+              href="https://www.facebook.com/bluefoxpvtltd"
               className="hover:bg-gray-700 transition rounded-full p-2"
             >
               <FaFacebook size={20} className="text-white" />
@@ -141,7 +141,7 @@ const Footer = () => {
               <FaInstagram size={20} className="text-white" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/company/blue-fox-pvt-ltd/?originalSubdomain=np"
               className="hover:bg-gray-700 transition rounded-full p-2"
             >
               <FaLinkedin size={20} className="text-white" />
