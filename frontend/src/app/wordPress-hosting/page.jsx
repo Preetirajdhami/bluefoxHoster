@@ -16,25 +16,29 @@ const WordpressHosting = () => {
 
   const plans = [
     {
-      title: 'Wp Lite',
-      priceMonthly: 'Rs 500',
-      priceYearly: 'Rs 5,000',
-      features: ['1 Website', '10GB SSD Storage', 'Free SSL', '10 Mailbox', 'Daily Backup'],
+      title: '2GB cPanel Hosting + .com Free Domain',
+      priceYearly: 'Rs 1,500',
+      priceBiennially: 'Rs 3,000',
+      features: ['Up to 5 Domain Hosting', 'Managed cPanel', 'Free .com Domain', '2 GB Ram', 'Daily Backup remains 7 Days Data'],
+      url: 'https://client.bluefoxhoster.com/index.php?rp=/store/web-hosting/2gb-cpanel-hosting-com-free-domain',
     },
     {
-      title: 'Wp Standard',
-      priceMonthly: 'Rs 999',
-      priceYearly: 'Rs 9,999',
-      features: ['10 Website', '25GB SSD Storage', 'Free SSL', 'Unlimited Mailbox', 'Daily Backup'],
+      title: 'News Portal with .com Domain Plan',
+      priceYearly: 'Rs 2,500',
+      priceBiennially: 'Rs 4,500',
+      features: ['Boosted Performance', 'cPanel Control Panel', 'Single Website', '10 Emails', 'Unlimited SSD Storage', 'Daily Backup'],
       bestSelling: true,
+      url: 'https://client.bluefoxhoster.com/index.php?rp=/store/web-hosting/news-portal-with-com-domain-plan',
     },
     {
-      title: 'Wp Ultimate',
-      priceMonthly: 'Rs 2,000',
-      priceYearly: 'Rs 20,000',
-      features: ['Unlimited Website', 'Unlimited SSD Storage', 'Free SSL', 'Unlimited Mailbox', 'Daily Backup'],
+      title: 'Developer Plan with Free domain',
+      priceYearly: 'Rs 3,000',
+      priceBiennially: 'Rs 5,400',
+      features: ['Boosted Performance', 'cPanel Control Panel', 'Unlimited MySQL Databases', 'Terminal Access', 'Daily Backup'],
+      url: 'https://client.bluefoxhoster.com/index.php?rp=/store/web-hosting/developer-plan-with-free-domain',
     },
   ];
+
 
   const features = [
     {
@@ -104,9 +108,9 @@ const WordpressHosting = () => {
 
       <div className='2xl:px-56 px-8 mt-14'>
         <div>
-          <h2 className='text-5xl font-semibold text-gray-800'> Choose a plan that suits your business </h2>
+          <h2 className='text-5xl font-semibold text-gray-800'>Choose a plan that suits your business</h2>
           <div className="flex justify-center items-center mt-6">
-            <span className="text-gray-500">Monthly</span>
+            <span className="text-gray-500">Yearly</span>
             <label className="mx-2 relative inline-flex items-center cursor-pointer">
               <input
                 type="checkbox"
@@ -119,7 +123,7 @@ const WordpressHosting = () => {
                 <FaCircle className="text-white w-5 h-5" />
               </span>
             </label>
-            <span className="text-gray-500">Yearly</span>
+            <span className="text-gray-500">Biennially</span>
           </div>
         </div>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 mb-9">
@@ -131,9 +135,13 @@ const WordpressHosting = () => {
             >
               <h3 className="text-center text-lg font-semibold text-blue-900">{plan.title}</h3>
               <p className="text-center text-4xl font-bold text-gray-900 mt-4">
-                {isYearly ? plan.priceYearly : plan.priceMonthly} <span className="text-lg">/year</span>
+                {isYearly ? plan.priceYearly : plan.priceBiennially}{' '}
+                <span className="text-lg">{isYearly ? '/year' : '/2 years'}</span>
               </p>
-              <button className="w-full mt-6 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition">
+              <button
+                className="w-full mt-6 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition"
+                onClick={() => (window.location.href = plan.url)}
+              >
                 Order Now
               </button>
               <ul className="mt-6 space-y-2 text-gray-600">
@@ -144,7 +152,11 @@ const WordpressHosting = () => {
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414L8.414 15 5.707 12.293a1 1 0 00-1.414 1.414l3.5 3.5a1 1 0 001.414 0l9-9a1 1 0 000-1.414z" clipRule="evenodd" />
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414L8.414 15 5.707 12.293a1 1 0 00-1.414 1.414l3.5 3.5a1 1 0 001.414 0l9-9a1 1 0 000-1.414z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                     <span>{feature}</span>
                   </li>
@@ -153,17 +165,15 @@ const WordpressHosting = () => {
               <button
                 className="mt-4 w-full py-2 text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition"
                 onClick={scrollToPricing}
-
               >
                 View Full Features
               </button>
             </div>
           ))}
         </div>
-
-
-
       </div>
+
+
 
       <div className='px-8 2xl:px-56 pb-20'
         style={{

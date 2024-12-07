@@ -49,25 +49,25 @@ const WebhostingDetailedPricing = () => {
 
     const plans = [
         {
-            planName: 'Alpha Cloud',
+            planName: '2GB cPanel Hosting',
             feature: 'Lightning fast NVMe powered web hosting backed by 24/7 support',
-            monthlyPrice: 10,
-            annualPrice: 100,
-            biennialPrice: 180,
+            monthlyPrice: 199,
+            annualPrice: 2149,
+            biennialPrice: 3811,
         },
         {
-            planName: 'Beta Cloud',
+            planName: 'News Portal Plan',
             feature: 'Lightning fast SSD powered web hosting backed by 24/7 support',
-            monthlyPrice: 20,
-            annualPrice: 200,
-            biennialPrice: 360,
+            monthlyPrice: 300,
+            annualPrice: 3240,
+            biennialPrice: 5760,
         },
         {
-            planName: 'Enterprise',
+            planName: 'Developer Plan',
             feature: 'Lightning fast NVMe powered web hosting backed by 24/7 support',
-            monthlyPrice: 50,
-            annualPrice: 500,
-            biennialPrice: 900,
+            monthlyPrice: 350,
+            annualPrice: 3780,
+            biennialPrice: 6720,
         }
     ];
 

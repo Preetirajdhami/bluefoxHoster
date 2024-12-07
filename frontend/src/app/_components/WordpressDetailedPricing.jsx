@@ -42,7 +42,7 @@ const WordpressDetailedPricing = () => {
 
     const plans = [
         {
-            planName: 'Wp Lite',
+            planName: '2GB cPanel Hosting + .com Free Domain',
             feature: 'Lightning fast NVMe powered web hosting backed by 24/7 support',
             monthlyPrice: 600,
             annualPrice: 5000,

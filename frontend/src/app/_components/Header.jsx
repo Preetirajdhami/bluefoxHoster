@@ -22,6 +22,13 @@ export default function Header() {
           "linear-gradient(93.2deg, rgba(10, 40, 100, 1) 0%, rgba(24, 95, 246, 1) 80%)",
         boxShadow: "0 4px 10px rgba(0, 0, 0, 0.5) 0px 0.2rem 0.5rem",
       }}
+      
+      
+      
+      
+      
+      
+      
     >
       <div className="w-full relative flex flex-row items-center justify-between px-8 2xl:px-56 py-4">
         <div className="flex items-center">

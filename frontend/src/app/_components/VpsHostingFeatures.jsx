@@ -34,44 +34,49 @@ const VpsHostingFeatures = () => {
 
   const plans = [
     {
-      value: "SC D4",
-      core: "2vCORE",
-      ram: "4 GB",
-      storage: "25GB SSD",
-      monthlyPrice: "Rs 2,500/ mo",
-      yearlyPrice: "Rs 25,000/ yr",
-    },
-    {
-      value: "SC D5",
+      value: "Cloud VPS S",
       core: "4vCORE",
-      ram: "8 GB",
-      storage: "50GB SSD",
-      monthlyPrice: "Rs 4,500/ mo",
-      yearlyPrice: "Rs 45,000/ yr",
+      ram: "6 GB",
+      storage: "400GB SSD",
+      monthlyPrice: "Rs 1999/ mo",
+      yearlyPrice: "Rs 23,988/ yr",
+      url: "https://client.bluefoxhoster.com/index.php?rp=/store/linuxvpsinternational/cloud-vps-s-most-popular",
     },
     {
-      value: "SC D6",
+      value: "Cloud VPS M",
       core: "6vCORE",
       ram: "16 GB",
-      storage: "100GB SSD",
-      monthlyPrice: "Rs 6,500/ mo",
-      yearlyPrice: "Rs 65,000/ yr",
+      storage: "400GB SSD",
+      monthlyPrice: "Rs 3499/ mo",
+      yearlyPrice: "Rs 41,988/ yr",
+      url: "https://client.bluefoxhoster.com/index.php?rp=/store/linuxvpsinternational/cloud-vps-m",
     },
     {
-      value: "SC D7",
+      value: "Cloud VPS 4C8R 800GB",
+      core: "4vCORE",
+      ram: "8 GB",
+      storage: "800GB SSD",
+      monthlyPrice: "Rs 1,500/ mo",
+      yearlyPrice: "Rs 18,000/ yr",
+      url: "https://client.bluefoxhoster.com/index.php?rp=/store/linuxvpsinternational/cloud-vps-4c8r-800gb",
+    },
+    {
+      value: "Cloud VPS L",
       core: "8vCORE",
-      ram: "32 GB",
-      storage: "200GB SSD",
-      monthlyPrice: "Rs 8,500/ mo",
-      yearlyPrice: "Rs 85,000/ yr",
+      ram: "24 GB",
+      storage: "1.2TB SSD",
+      monthlyPrice: "Rs 1,300/ mo",
+      yearlyPrice: "Rs 15,600/ yr",
+      url: "https://client.bluefoxhoster.com/index.php?rp=/store/linuxvpsinternational/cloud-vps-l",
     },
     {
-      value: "SC D8",
-      core: "10vCORE",
-      ram: "64 GB",
-      storage: "500GB SSD",
-      monthlyPrice: "Rs 10,500/ mo",
-      yearlyPrice: "Rs 105,000/ yr",
+      value: "Cloud VPS XL",
+      core: "12vCORE",
+      ram: "48 GB",
+      storage: "1.6TB SSD",
+      monthlyPrice: "Rs 1300/ mo",
+      yearlyPrice: "Rs 15,600/ yr",
+      url: "https://client.bluefoxhoster.com/index.php?rp=/store/linuxvpsinternational/cloud-vps-xl",
     },
   ];
 
@@ -141,48 +146,29 @@ const VpsHostingFeatures = () => {
           <table className="text-sm text-left text-gray-700 border-collapse border border-gray-200 w-full overflow-auto whitespace-nowrap">
             <thead>
               <tr className="bg-gradient-to-r from-blue-800 to-blue-600 text-white uppercase tracking-wider">
-                <th className="py-3 px-4 h-12 border-b border-gray-300 font-medium">
-                  VALUE
-                </th>
-                <th className="py-3 px-4 h-12 border-b border-gray-300 font-medium">
-                  CORE
-                </th>
-                <th className="py-3 px-4 h-12 border-b border-gray-300 font-medium">
-                  RAM
-                </th>
-                <th className="py-3 px-4 h-12 border-b border-gray-300 font-medium">
-                  STORAGE
-                </th>
-                <th className="py-3 px-4 h-12 border-b border-gray-300 font-medium">
-                  PRICE
-                </th>
+                <th className="py-3 px-4 h-12 border-b border-gray-300 font-medium">VALUE</th>
+                <th className="py-3 px-4 h-12 border-b border-gray-300 font-medium">CORE</th>
+                <th className="py-3 px-4 h-12 border-b border-gray-300 font-medium">RAM</th>
+                <th className="py-3 px-4 h-12 border-b border-gray-300 font-medium">STORAGE</th>
+                <th className="py-3 px-4 h-12 border-b border-gray-300 font-medium">PRICE</th>
                 <th className="py-3 px-4 h-12 border-b border-gray-300"></th>
               </tr>
             </thead>
             <tbody>
               {plans.map((plan, index) => (
-                <tr
-                  key={index}
-                  className="hover:bg-gray-100 transition duration-150"
-                >
-                  <td className="py-4 px-6 border-b border-gray-200">
-                    {plan.value}
-                  </td>
-                  <td className="py-4 px-6 border-b border-gray-200">
-                    {plan.core}
-                  </td>
-                  <td className="py-4 px-6 border-b border-gray-200">
-                    {plan.ram}
-                  </td>
-                  <td className="py-4 px-6 border-b border-gray-200">
-                    {plan.storage}
-                  </td>
+                <tr key={index} className="hover:bg-gray-100 transition duration-150">
+                  <td className="py-4 px-6 border-b border-gray-200">{plan.value}</td>
+                  <td className="py-4 px-6 border-b border-gray-200">{plan.core}</td>
+                  <td className="py-4 px-6 border-b border-gray-200">{plan.ram}</td>
+                  <td className="py-4 px-6 border-b border-gray-200">{plan.storage}</td>
                   <td className="py-4 px-6 border-b border-gray-200">
                     {isYearly ? plan.yearlyPrice : plan.monthlyPrice}
                   </td>
                   <td className="py-4 px-6 border-b border-gray-200 text-center">
                     <a
-                      href="#"
+                      href={plan.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="bg-blue-600 text-white py-2 px-3 md:px-4 rounded-md shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150 text-sm md:text-base"
                     >
                       Deploy Now
@@ -192,24 +178,20 @@ const VpsHostingFeatures = () => {
               ))}
             </tbody>
           </table>
-          <div className="bg-gray-50  py-6">
+          <div className="bg-gray-50 py-6">
             <h3 className="text-center text-lg font-medium border-b pb-4 text-gray-700 mb-4">
               All Plans Come With
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-4  md:px-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-4 md:px-16">
               {hosting_features.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-2">
                   <IoMdCheckmarkCircleOutline className="text-green-500 text-lg" />
-                  <span className="text-gray-600 text-sm font-medium">
-                    {feature.name}
-                  </span>
-                  <CiCircleInfo  className="text-blue-500 cursor-pointer" title={feature.tooltip} />
+                  <span className="text-gray-600 text-sm font-medium">{feature.name}</span>
+                  <CiCircleInfo className="text-blue-500 cursor-pointer" title={feature.tooltip} />
                 </div>
               ))}
             </div>
           </div>
-
-
         </div>
       </div>
     </div>

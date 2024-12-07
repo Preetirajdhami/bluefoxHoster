@@ -4,10 +4,12 @@ import { FaCheckCircle, FaCircle } from "react-icons/fa";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import WebHostingImage5 from './WebHostingImage5';
 
-
-const HostingPlanCard = ({ title, monthlyPrice, yearlyPrice, features, isYearly }) => {
+const HostingPlanCard = ({ title, monthlyPrice, yearlyPrice, features, isYearly, buyNowUrl }) => {
     const price = isYearly ? yearlyPrice : monthlyPrice;
 
+    const handleBuyNow = () => {
+        window.location.href = buyNowUrl; // Redirect to the provided URL
+    };
 
     return (
         <div className="relative border-2 border-blue-500 rounded-lg p-6 flex flex-col items-center md:items-start gap-4 md:gap-6 max-w-md md:max-w-4xl mx-auto transition-all duration-300">
@@ -20,7 +22,10 @@ const HostingPlanCard = ({ title, monthlyPrice, yearlyPrice, features, isYearly 
                 <div className="text-sm text-gray-500">/ {isYearly ? 'year' : 'month'}</div>
             </div>
             <div className="w-full">
-                <button className="w-full mt-4 py-2 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-600 transition duration-300">
+                <button
+                    onClick={handleBuyNow}
+                    className="w-full mt-4 py-2 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-600 transition duration-300"
+                >
                     BUY NOW
                 </button>
             </div>
@@ -50,29 +55,32 @@ const WebHostingCard = () => {
 
     const plans = [
         {
-            title: "LaunchPad Web Hosting",
-            monthlyPrice: 250,
-            yearlyPrice: 2500,
-            features: ["1 Site hosted", "3 GB SSD Storage", "3 Custom Emails", "LiteSpeed Web Server", "Daily Backups"]
+            title: "2GB cPanel Hosting",
+            monthlyPrice: 199.00,
+            yearlyPrice: 2149,
+            features: ["Up to 5 Domain Hosting", "Managed cPanel", "2 GB Storage (100% SSD)", "Unlimited Bandwidth", "FREE SSL Certificate", "2 GB Ram", "Daily Backup remains 7 Days Data", "Unlimited Sub Domain & E-Mail"],
+            buyNowUrl: "https://client.bluefoxhoster.com/index.php?rp=/store/web-hosting/2gb-cpanel-hosting"
         },
         {
-            title: "Growth Web Hosting",
-            monthlyPrice: 500,
-            yearlyPrice: 5000,
-            features: ["5 Sites hosted", "10 GB SSD Storage", "5 Custom Emails", "LiteSpeed Web Server", "Daily Backups"]
+            title: "News Portal Plan",
+            monthlyPrice: 300.00,
+            yearlyPrice: 3240,
+            features: ["Boosted Performance", "cPanel Control Panel", "Single Website", "10 MySQL Databases", "Daily Backups", "Terminal Access", "Python/Nodejs Compatibility", "Free SSL Certificate"],
+            buyNowUrl: "https://client.bluefoxhoster.com/index.php?rp=/store/web-hosting/news-portal-plan"
         },
         {
-            title: "Pro Web Hosting",
-            monthlyPrice: 1000,
-            yearlyPrice: 10000,
-            features: ["10 Sites hosted", "20 GB SSD Storage", "Unlimited Emails", "LiteSpeed Web Server", "Daily Backups"]
+            title: "Developer Plan",
+            monthlyPrice: 350.00,
+            yearlyPrice: 3780,
+            features: ["Boosted Performance", "cPanel Control Panel", "Upto 5 Websites can host", "Unlimited Emails", "Unlimited SSD Storage", "Unlimited MySQL Databases", "Unmetered Bandwidth", "Free 1-click WordPress Install"],
+            buyNowUrl: "https://client.bluefoxhoster.com/index.php?rp=/store/web-hosting/developer-plan"
         },
     ];
 
     return (
         <div>
             <div className='bg-gray-50 pt-10 2xl:px-56 px-8 text-center'>
-                <h2 className="text-5xl font-medium text-gray-700" style={{ color: '#0073b3' }}>Best Cloud Hosting Plans</h2>
+                <h2 className="text-5xl font-medium text-gray-700" style={{ color: '#0073b3' }}>Best cPanel Hosting Plans</h2>
                 <p className="text-gray-500 mt-2">
                     Join the thousands who trust our top-rated web hosting in Nepal. Choose the best web hosting package that best fits your needs.
                 </p>
@@ -113,8 +121,6 @@ const WebHostingCard = () => {
                     {plans.map((plan, index) => (
                         <HostingPlanCard key={index} {...plan} isYearly={isYearly} />
                     ))}
-
-
                 </div>
                 <div className='pt-4 pb-4'>
                     <h1 className='cursor-pointer border-2 border-blue-500 inline-block px-4 py-2 rounded-lg text-gray-700 hover:bg-blue-50' onClick={scrollToPricing}>
@@ -124,11 +130,9 @@ const WebHostingCard = () => {
 
             </div>
 
-            {/*Outstanding support section */}
+            {/* Outstanding support section */}
             <div>
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6 px-8 2xl:px-56 ">
-                    
-                    
                     <div className="md:w-1/2  py-28 px-8 rounded-lg">
                         <h2 className="text-4xl font-bold text-gray-700 mb-4">
                             Outstanding 24/7 Expert Hosting Support
@@ -143,16 +147,10 @@ const WebHostingCard = () => {
                             Contact Now
                         </a>
                     </div>
-
-                   
-                    <div className="md:w-1/2   rounded-lg flex items-center justify-center">
-
-                    <WebHostingImage5 />
-                    
-                       
+                    <div className="md:w-1/2 rounded-lg flex items-center justify-center">
+                        <WebHostingImage5 />
                     </div>
                 </div>
-
             </div>
 
         </div>
